@@ -1,0 +1,8 @@
+**/.vs
+**/logs
+**/obj
+**/Library
+**/csproj
+**/unityproj
+**/Temp
+**/.vscode
