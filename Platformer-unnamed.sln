@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.ben-w.erp", "com.ben-w.erp.csproj", "{2585f8dd-0f8f-ee93-6211-81209cdb091c}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6977e325-1fba-09b1-9e1f-fa78ed249b33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2585f8dd-0f8f-ee93-6211-81209cdb091c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2585f8dd-0f8f-ee93-6211-81209cdb091c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6977e325-1fba-09b1-9e1f-fa78ed249b33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6977e325-1fba-09b1-9e1f-fa78ed249b33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
