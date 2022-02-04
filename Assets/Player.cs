@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
      GameObject heart1;
      GameObject heart2;
      GameObject heart3;
+     //GameObject picture;
 
 
     void Start(){
         heart1 = GameObject.Find("heart1");
         heart2 = GameObject.Find("heart2");
         heart3 = GameObject.Find("heart3");
+        //picture = GameObject.Find("picture");
     }
     void Update()
     { 
@@ -43,8 +45,18 @@ public class Player : MonoBehaviour
     void ChangeHealthBar()
     {
         heart1.SetActive(false);
-        heart2.SetActive(false);
-        heart3.SetActive(false);
+        if (playerHealth == 2)
+        {
+            heart2.SetActive(false);
+        }
+        if (playerHealth == 1)
+        {
+            heart3.SetActive(false);
+        }
+        else
+        {
+            //picture.SetActive(true);
+        }
     }
 
 
