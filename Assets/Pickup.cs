@@ -7,19 +7,25 @@ public class Pickup : MonoBehaviour
     public Vector3 playerPosition;
     public Vector3 weaponPosition;
     public GameObject player;
-    public GameObject relv;
+    //public GameObject relv;
     // Transform PlayerAttachment;
     //public Transform WeaponAttachment;
 
     private bool weaponHit = false;
+    public bool isBeingHeld = false; 
 
 
     void Update()
     {
-        if (weaponHit && Input.GetKeyDown(KeyCode.E))
+        checkIsBeingHeld();
+        if (weaponHit && Input.GetKeyDown(KeyCode.E) && (isBeingHeld == false))
         {
             Debug.Log("E is pressed");
             PickUp();
+        }
+        else if (weaponHit && Input.GetKeyDown(KeyCode.E) && (isBeingHeld == true))
+        {
+            ChangeWeapon();
         }
 
     }
@@ -35,11 +41,39 @@ public class Pickup : MonoBehaviour
 
     }
 
+        void checkIsBeingHeld()
+    {
+        if (transform.parent == null)
+        {
+            //Debug.Log("The weapon is not being held");
+            isBeingHeld = false;
+        }
+        else
+        {
+            //Debug.Log("The weapon is being held");
+            isBeingHeld = true;
+        }
+    }
+
 
     void PickUp()
     {
         Debug.Log("yes");
-        relv.transform.SetParent(player.transform);
+        transform.SetParent(player.transform);
         //PlayerAttachment.transform.SetParent(WeaponAttachment.transform);
     }
+
+
+    void ChangeWeapon()
+    {
+        if (Input.GetKey("e")) //if E is BEING HELD
+        {
+            //Debug.Log("E is held down");
+            transform.parent = null;
+            Destroy(gameObject);
+            //set parent to null and set the new weapon as a child
+            //PickUp();
+        }
+    }
+
 }

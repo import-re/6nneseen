@@ -6,11 +6,13 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public bool isBeingHeld = false;
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        CheckIfIsBeingHeld();
+        if (Input.GetButtonDown("Fire1") && isBeingHeld)
         {
             Shoot();
         }
@@ -20,5 +22,19 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+
+    void CheckIfIsBeingHeld()
+    {
+        if (transform.parent == null)
+        {
+            isBeingHeld = false;
+        }
+
+        else
+        {
+            isBeingHeld = true;
+        }
     }
 }

@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 0f;
 
     void Start(){
         rb = this.GetComponent<Rigidbody2D>();

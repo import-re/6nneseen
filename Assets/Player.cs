@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     { 
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
     }
 
     void OnCollisionEnter2D(Collision2D coll)
