@@ -7,9 +7,9 @@ public class Pickup : MonoBehaviour
     public Vector3 playerPosition;
     public Vector3 weaponPosition;
     public GameObject player;
-    //public GameObject relv;
+    public GameObject weapon;
     // Transform PlayerAttachment;
-    //public Transform WeaponAttachment;
+    public Transform WeaponAttachmentOnPlayer;
 
     private bool weaponHit = false;
     public bool isBeingHeld = false; 
@@ -60,6 +60,7 @@ public class Pickup : MonoBehaviour
     {
         Debug.Log("yes");
         transform.SetParent(player.transform);
+        Destroy(gameObject);
         //PlayerAttachment.transform.SetParent(WeaponAttachment.transform);
     }
 
