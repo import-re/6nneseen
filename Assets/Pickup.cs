@@ -14,18 +14,17 @@ public class Pickup : MonoBehaviour
     private bool weaponHit = false;
     public bool isBeingHeld = false; 
 
+    public Transform parent;
+
 
     void Update()
     {
         checkIsBeingHeld();
+        DropWeapon();
         if (weaponHit && Input.GetKeyDown(KeyCode.E) && (isBeingHeld == false))
         {
-            Debug.Log("E is pressed");
+            //Debug.Log("E is pressed");
             PickUp();
-        }
-        else if (weaponHit && Input.GetKeyDown(KeyCode.E) && (isBeingHeld == true))
-        {
-            ChangeWeapon();
         }
 
     }
@@ -35,7 +34,7 @@ public class Pickup : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log("Please press E to pick up the weapon.");
+            //Debug.Log("Please press E to pick up the weapon.");
             weaponHit = true;
         }
 
@@ -58,16 +57,16 @@ public class Pickup : MonoBehaviour
 
     void PickUp()
     {
-        Debug.Log("yes");
-        transform.SetParent(player.transform);
-        Destroy(gameObject);
+        Instantiate(weapon, WeaponAttachmentOnPlayer.position, WeaponAttachmentOnPlayer.rotation, Transform parent, bool instantiateInWorldSpace = false);
+        //transform.SetParent(player.transform);
+        //Destroy(gameObject);
         //PlayerAttachment.transform.SetParent(WeaponAttachment.transform);
     }
 
 
-    void ChangeWeapon()
+    void DropWeapon()
     {
-        if (Input.GetKey("e")) //if E is BEING HELD
+        if (Input.GetKey("q")) //if E is BEING HELD
         {
             //Debug.Log("E is held down");
             transform.parent = null;
