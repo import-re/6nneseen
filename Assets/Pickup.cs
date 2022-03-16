@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public Vector3 playerPosition;
-    public Vector3 weaponPosition;
     public GameObject player;
-    public GameObject weapon;
-    // Transform PlayerAttachment;
-    public Transform WeaponAttachmentOnPlayer;
 
     private bool weaponHit = false;
-    public bool isBeingHeld = false; 
-
-    public Transform parent;
+    public bool isBeingHeld = false;
 
 
     void Update()
@@ -57,10 +50,9 @@ public class Pickup : MonoBehaviour
 
     void PickUp()
     {
-        Instantiate(weapon, WeaponAttachmentOnPlayer.position, WeaponAttachmentOnPlayer.rotation, Transform parent, bool instantiateInWorldSpace = false);
-        //transform.SetParent(player.transform);
-        //Destroy(gameObject);
-        //PlayerAttachment.transform.SetParent(WeaponAttachment.transform);
+        //Instantiate(weapon, WeaponAttachmentOnPlayer.position, WeaponAttachmentOnPlayer.rotation, Transform parent, bool instantiateInWorldSpace = false);
+        transform.SetParent(player.transform);
+        transform.localPosition = new Vector3(0.7f, 0.3f);
     }
 
 
