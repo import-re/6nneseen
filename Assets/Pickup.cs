@@ -12,14 +12,19 @@ public class Pickup : MonoBehaviour
 
     void Update()
     {
-        checkIsBeingHeld();
-        DropWeapon();
-        if (weaponHit && Input.GetKeyDown(KeyCode.E) && (isBeingHeld == false))
+        if (weaponHit && Input.GetKeyDown(KeyCode.E))
         {
-            //Debug.Log("E is pressed");
-            PickUp();
+            checkIsBeingHeld();
+            if (isBeingHeld == false)
+                {
+                    PickUp();
+                }
         }
 
+        if (Input.GetKey("q") && isBeingHeld)
+        {
+            DropWeapon();
+        }
     }
 
 
@@ -27,7 +32,6 @@ public class Pickup : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            //Debug.Log("Please press E to pick up the weapon.");
             weaponHit = true;
         }
 
@@ -35,14 +39,9 @@ public class Pickup : MonoBehaviour
 
         void checkIsBeingHeld()
     {
-        if (transform.parent == null)
+        if (gameObject.transform.parent != null && gameObject.transform.parent.tag == "Weapon")
         {
-            //Debug.Log("The weapon is not being held");
-            isBeingHeld = false;
-        }
-        else
-        {
-            //Debug.Log("The weapon is being held");
+            Debug.Log("The weapon isbeing held");
             isBeingHeld = true;
         }
     }
@@ -58,14 +57,9 @@ public class Pickup : MonoBehaviour
 
     void DropWeapon()
     {
-        if (Input.GetKey("q")) //if E is BEING HELD
-        {
-            //Debug.Log("E is held down");
-            transform.parent = null;
-            Destroy(gameObject);
-            //set parent to null and set the new weapon as a child
-            //PickUp();
-        }
+        transform.parent = null;
+        Destroy(gameObject);
+        //set parent to null and set the new weapon as a child
     }
 
 }
