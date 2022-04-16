@@ -379,7 +379,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7626699, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1698,6 +1698,14 @@ PrefabInstance:
       propertyPath: WeaponAttachmentOnPlayer
       value: 
       objectReference: {fileID: 656203005}
+    - target: {fileID: 4097877880338172465, guid: dbe5d69396d6f394496033e0f09f5825, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 4097877878972814147}
+    - target: {fileID: 4097877880338172465, guid: dbe5d69396d6f394496033e0f09f5825, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3229945497620931175, guid: 14ad2867a232ad545989d44443916785, type: 3}
     - target: {fileID: 4097877880338172467, guid: dbe5d69396d6f394496033e0f09f5825, type: 3}
       propertyPath: m_Name
       value: vibu
@@ -1756,7 +1764,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4097877880338172471, guid: dbe5d69396d6f394496033e0f09f5825, type: 3}
       propertyPath: m_SortingLayerID
-      value: -66331817
+      value: -1344137591
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe5d69396d6f394496033e0f09f5825, type: 3}
+--- !u!4 &4097877878972814147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4097877879098338573, guid: dbe5d69396d6f394496033e0f09f5825, type: 3}
+  m_PrefabInstance: {fileID: 4097877878972814146}
+  m_PrefabAsset: {fileID: 0}
