@@ -12,14 +12,21 @@ public class Pickup : MonoBehaviour
 
     void Update()
     {
+        checkIsBeingHeld();
         if (weaponHit && Input.GetKeyDown(KeyCode.E))
         {
+            //Debug.Log("Trying to pick up a weapon");
             checkIsBeingHeld();
-            if (isBeingHeld == false)
+            if (isBeingHeld == true)
                 {
-                    PickUp();
+                    Debug.Log("Can't pick up two weapons at once,");
                 }
+            else
+            {
+                PickUp();
+            }
         }
+
 
         if (Input.GetKey("q") && isBeingHeld)
         {
@@ -37,11 +44,12 @@ public class Pickup : MonoBehaviour
 
     }
 
-        void checkIsBeingHeld()
+    void checkIsBeingHeld()
     {
-        if (gameObject.transform.parent != null && gameObject.transform.parent.tag == "Weapon")
+        if (transform.parent != null)
         {
-            Debug.Log("The weapon isbeing held");
+            //Debug.Log("This object's parent is " + transform.parent.name);
+            Debug.Log("The object is being held");
             isBeingHeld = true;
         }
     }
@@ -52,12 +60,14 @@ public class Pickup : MonoBehaviour
         //Instantiate(weapon, WeaponAttachmentOnPlayer.position, WeaponAttachmentOnPlayer.rotation, Transform parent, bool instantiateInWorldSpace = false);
         transform.SetParent(player.transform);
         transform.localPosition = new Vector3(0.7f, 0.3f);
+        isBeingHeld = true;
     }
 
 
     void DropWeapon()
     {
         transform.parent = null;
+        isBeingHeld = false;
         Destroy(gameObject);
         //set parent to null and set the new weapon as a child
     }
