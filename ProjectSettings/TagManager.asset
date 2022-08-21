@@ -47,6 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 2428531985
     locked: 0
+  - name: Floor
+    uniqueID: 3837378167
+    locked: 0
   - name: Walls
     uniqueID: 3293386043
     locked: 0

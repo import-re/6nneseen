@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int ehealth = 3;
+    public int ehealth = 120;
 
     public Transform player;
     private Rigidbody2D rb;
