@@ -39,6 +39,7 @@
      <Compile Include="Assets\CharacterController2D.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\SceneTransition.cs" />
      <Compile Include="Assets\Pickup.cs" />
      <Compile Include="Assets\Weapon.cs" />
      <Compile Include="Assets\Bullet.cs" />
