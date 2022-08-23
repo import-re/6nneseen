@@ -44,6 +44,7 @@
      <Compile Include="Assets\Weapon.cs" />
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\Enemy.cs" />
+     <Compile Include="Assets\LevelLoader2.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
