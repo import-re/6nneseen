@@ -12,7 +12,7 @@ public class LevelLoader2 : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(sceneToLoad);
-            DontDestroyOnLoad(coll.gameObject);
+            //DontDestroyOnLoad(coll.gameObject);
         }
 
     }
