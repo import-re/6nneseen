@@ -11,8 +11,13 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab1;
     public GameObject bulletPrefab2;
     public GameObject bulletPrefab3;
+    public AudioSource shootingSound; 
 
 
+    void Start()
+    {
+        shootingSound = GetComponent<AudioSource>();
+    }
     void Update()
     {
         CheckIfIsBeingHeld();
@@ -50,6 +55,7 @@ public class Weapon : MonoBehaviour
         {
             bulletPrefab = bulletPrefab3;
         }
+        shootingSound.Play();
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
