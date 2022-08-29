@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioSource buttonSound;
+    public AudioSource exitSound;
 
 
     void Start()
     {
         buttonSound = GetComponent<AudioSource>();
+        exitSound = GetComponent<AudioSource>();
     }
 
 
@@ -23,6 +25,13 @@ public class MainMenu : MonoBehaviour
 
     public void quitGame()
     {
+        exitSound.Play();
         Application.Quit();
+    }
+
+
+    public void loadMainPage()
+    {
+        SceneManager.LoadScene("StartPage");
     }
 }
