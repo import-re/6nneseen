@@ -18,6 +18,8 @@ public class Weapon : MonoBehaviour
     {
         shootingSound = GetComponent<AudioSource>();
     }
+
+
     void Update()
     {
         CheckIfIsBeingHeld();
@@ -31,11 +33,9 @@ public class Weapon : MonoBehaviour
 
 
 //Idea: i have three different bullet types, randomly select a bullet type and shoot
-//eandom module?
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        //Debug.Log("Shoot");
     }
 
 

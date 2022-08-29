@@ -16,7 +16,4 @@ public class SceneTransition : MonoBehaviour
         }
 
     }
-
-
-
 }

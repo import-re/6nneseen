@@ -11,9 +11,11 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
     public float moveSpeed = 0f;
 
+
     void Start(){
         rb = this.GetComponent<Rigidbody2D>();
     }
+
 
     void Update(){
         Vector3 direction = player.position - transform.position;
@@ -23,9 +25,11 @@ public class Enemy : MonoBehaviour
         moveCharacter(movement);
     }
 
+
     void FixepUpdate(){
         //moveCharacter(movement);
     }
+
 
     void moveCharacter(Vector2 direction){
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
@@ -39,13 +43,6 @@ public class Enemy : MonoBehaviour
             TakeDamage(1);
             Destroy(coll.gameObject); //destroying the bullets
         }
-
-
-        /*#if (coll.gameObject.tag == "Kernel")  #hint for the future different weapon types
-        {
-            TakeDamage(x);
-            Destroy(coll.gameObject); //destroying the bullets
-        }*/
     }
 
 

@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-
     public AudioSource buttonSound;
+
 
     void Start()
     {
