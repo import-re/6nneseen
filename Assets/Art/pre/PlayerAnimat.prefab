@@ -81,14 +81,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2117097299
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c535c06410d977541be5f85b03fd24f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ee26145094c105458e072e56acd0ff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.33, y: 0.32}
+  m_Size: {x: 4.53, y: 8.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -112,7 +112,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.53, y: 8.47}
-    newSize: {x: 0.33, y: 0.32}
+    newSize: {x: 4.53, y: 8.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -153,7 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7696286898308747baae96d2aebd4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 3
+  maxHealth: 3
+  damage: 0
+  currentHealth: 0
+  healthbar: {fileID: 0}
 --- !u!114 &7080748288546696747
 MonoBehaviour:
   m_ObjectHideFlags: 0

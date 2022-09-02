@@ -12,6 +12,8 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab2;
     public GameObject bulletPrefab3;
     public AudioSource shootingSound; 
+    public bool isShooting = false;
+    public Animator anim;
 
 
     void Start()
@@ -22,26 +24,18 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        anim.SetBool("isShooting", isShooting);
         CheckIfIsBeingHeld();
         if (Input.GetButtonDown("Fire1") && isBeingHeld)
         {
             ShootRandom();
         }
-        
-
-    }
-
-
-//Idea: i have three different bullet types, randomly select a bullet type and shoot
-    void Shoot()
-    {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
 
     void ShootRandom()
     {
-        bulletType = Random.Range(1,3);
+        bulletType = Random.Range(1,4);
         bulletType.ToString();
         if (bulletType == 1)
         {
@@ -56,6 +50,7 @@ public class Weapon : MonoBehaviour
             bulletPrefab = bulletPrefab3;
         }
         shootingSound.Play();
+        isShooting = true;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
