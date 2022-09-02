@@ -156,7 +156,7 @@ MonoBehaviour:
   maxHealth: 3
   damage: 0
   currentHealth: 0
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 6109984736841524282, guid: dee73341183d319498f3cff3520222cb, type: 3}
 --- !u!114 &7080748288546696747
 MonoBehaviour:
   m_ObjectHideFlags: 0

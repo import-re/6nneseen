@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 487753581353126810}
   - component: {fileID: 487753581353126811}
   - component: {fileID: 487753581353126808}
+  - component: {fileID: 7074654148644314731}
   m_Layer: 6
   m_Name: "p\xF5rand22"
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -457589129
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 82165a70739dcf24ca3f7ae2a225b23d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +145,28 @@ EdgeCollider2D:
   - {x: 6.044145, y: 0.31565773}
   - {x: 6.368319, y: 0.3877482}
   - {x: 6.3732734, y: -3.605127}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &7074654148644314731
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487753581353126809}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -6.416911, y: 0.35671675}
+  - {x: 6.323897, y: 0.37293112}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

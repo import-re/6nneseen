@@ -19,15 +19,9 @@ public class Enemy : MonoBehaviour
 
     void Update(){
         Vector3 direction = player.position - transform.position;
-        //Debug.Log(direction);
         direction.Normalize();
         movement = direction;
         moveCharacter(movement);
-    }
-
-
-    void FixepUpdate(){
-        //moveCharacter(movement);
     }
 
 
@@ -41,7 +35,7 @@ public class Enemy : MonoBehaviour
         if (coll.gameObject.tag == "Bullet")
         {
             TakeDamage(1);
-            Destroy(coll.gameObject); //destroying the bullets
+            Destroy(coll.gameObject);
         }
     }
 
