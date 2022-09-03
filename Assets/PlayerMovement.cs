@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 
-		anim.SetFloat("HorizontalInput", Input.GetAxis("Horizontal"));
+		anim.SetFloat("HorizontalInput", Mathf.Abs(Input.GetAxis("Horizontal")));
 
 	}
 

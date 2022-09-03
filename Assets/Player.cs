@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public int maxHealth = 3;
-     GameObject heart1;
-     GameObject heart2;
-     GameObject heart3;
      public int damage;
      public int currentHealth;
      public HealthBar healthbar;

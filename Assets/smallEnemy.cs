@@ -9,21 +9,25 @@ public class smallEnemy : MonoBehaviour
     public GameObject bigEnemy;
     public Transform spawnpoint;
     public int number = 10;
+    public Animator anim;
+    public bool isDestroyed;
+
 
 
     void Update()
     {
         distance = player.position.x - transform.position.x;
+        anim.SetFloat("distance", Mathf.Abs(distance));
 
 
-        if (distance < 0)
+        if (Mathf.Abs(distance) < 10)
         {
-            distance = distance * -1;
-            if (distance < number)
-            {
-                transformEnemy();
+            if (isDestroyed == false)
 
+            {
+                Invoke("transformEnemy", 1.5f);
             }
+            //transformEnemy();
         }
 
     }
@@ -33,9 +37,8 @@ public class smallEnemy : MonoBehaviour
     void transformEnemy()
     {
         Destroy(gameObject);
+        isDestroyed = true;
         Instantiate(bigEnemy, spawnpoint.position, spawnpoint.rotation);
-
-
     }
 
 }

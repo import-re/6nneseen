@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3059394746734524953}
   - component: {fileID: 3059394746734524954}
   - component: {fileID: 3059394746734524958}
+  - component: {fileID: 4188614625029362369}
   m_Layer: 0
   m_Name: martini_vaikekoletis
   m_TagString: Enemy
@@ -152,6 +153,28 @@ MonoBehaviour:
   bigEnemy: {fileID: 2689123981525082168, guid: fd5cbeafa00c85041bcb938828f6617a, type: 3}
   spawnpoint: {fileID: 3059394748315551444}
   number: 10
+  anim: {fileID: 4188614625029362369}
+  isDestroyed: 0
+--- !u!95 &4188614625029362369
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059394746734524955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c32840a301e6cbe428c7b5e9c836cf68, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3059394748315551445
 GameObject:
   m_ObjectHideFlags: 0

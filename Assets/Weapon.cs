@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Weapon : MonoBehaviour
     public AudioSource shootingSound; 
     public bool isShooting = false;
     public Animator anim;
+    //public Animation shooting;
+    //public UnityEvent OnShootingEvent;
 
 
     void Start()
@@ -30,6 +33,12 @@ public class Weapon : MonoBehaviour
         {
             ShootRandom();
         }
+        
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            isShooting = false;
+        }
+        
     }
 
 
@@ -50,6 +59,7 @@ public class Weapon : MonoBehaviour
             bulletPrefab = bulletPrefab3;
         }
         shootingSound.Play();
+        //anim.CrossFade(shooting);
         isShooting = true;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
