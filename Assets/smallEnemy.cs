@@ -25,7 +25,7 @@ public class smallEnemy : MonoBehaviour
             if (isDestroyed == false)
 
             {
-                Invoke("transformEnemy", 1.5f);
+                Invoke("transformEnemy", 2f);
             }
             //transformEnemy();
         }

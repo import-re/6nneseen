@@ -21,10 +21,43 @@ public class Pickup : MonoBehaviour
             PickUp();
         }
 
-        if (weaponHit && Input.GetKeyDown(KeyCode.Q))
+
+        if (Input.GetKeyDown("q") && transform.parent != null)
         {
             DropWeapon();
         }
+    }
+
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            weaponHit = true;
+        }
+
+    }
+
+
+    void PickUp()
+    {
+        //Instantiate(weapon, WeaponAttachmentOnPlayer.position, WeaponAttachmentOnPlayer.rotation, Transform parent, bool instantiateInWorldSpace = false);
+        transform.SetParent(player.transform);
+        transform.localPosition = new Vector3(0.7f, 0.15f);
+        itisBeingHeld = true;
+    }
+
+
+    void DropWeapon()
+    {
+        transform.parent = null;
+        itisBeingHeld = false;
+        Destroy(gameObject);
+        //set parent to null and set the new weapon as a child
+    }
+}
+
+
         //checkIsItBeingHeld();
         /*if (weaponHit && Input.GetKeyDown(KeyCode.E))
         {
@@ -48,13 +81,7 @@ public class Pickup : MonoBehaviour
                 //Debug.LogError("I'm confused");
             }
         }
-*/
 
-        if (Input.GetKeyDown("q") && transform.parent != null)
-        {
-            DropWeapon();
-        }
-    }
 
 
     void checkChildren()
@@ -68,15 +95,8 @@ public class Pickup : MonoBehaviour
         }
     }
 
+    
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Player")
-        {
-            weaponHit = true;
-        }
-
-    }
 
     /*void checkIsItBeingHeld()
     {
@@ -89,23 +109,3 @@ public class Pickup : MonoBehaviour
 
         
     }*/
-
-
-    void PickUp()
-    {
-        //Instantiate(weapon, WeaponAttachmentOnPlayer.position, WeaponAttachmentOnPlayer.rotation, Transform parent, bool instantiateInWorldSpace = false);
-        transform.SetParent(player.transform);
-        transform.localPosition = new Vector3(0.7f, 0.15f);
-        itisBeingHeld = true;
-    }
-
-
-    void DropWeapon()
-    {
-        transform.parent = null;
-        itisBeingHeld = false;
-        Destroy(gameObject);
-        //set parent to null and set the new weapon as a child
-    }
-
-}

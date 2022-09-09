@@ -34,4 +34,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("StartPage");
     }
+
+    public void loadOptions()
+    {
+        buttonSound.Play();
+        SceneManager.LoadScene("Options");
+    }
 }
