@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
-	public bool hasHorizontalMove = false;
+	//public bool hasHorizontalMove = false;
 	public Animator anim;
 	
 
@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
+			anim.SetBool("isJumping", true);
 		}
 
 		if (Input.GetButtonDown("Crouch"))
@@ -31,7 +32,6 @@ public class PlayerMovement : MonoBehaviour {
 			crouch = false;
 		}
 
-
 		anim.SetFloat("HorizontalInput", Mathf.Abs(Input.GetAxis("Horizontal")));
 
 	}
@@ -41,5 +41,11 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
 		jump = false;
+	}
+
+
+	public void onLanding()
+	{
+		anim.SetBool("isJumping", false);
 	}
 }
