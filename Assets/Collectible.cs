@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class Collectible : MonoBehaviour
 {
-    public Text Counter;
-    public int coinCounter = 0;
+    public Text text;
+    public int coinCounter;
 
 
-    void OnCollision2DEnter(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log(coinCounter);
             coinCounter++;
-            Counter.text = coinCounter.ToString();
+            text.text = coinCounter.ToString();
+            Destroy(gameObject);
         }
     }
 }
