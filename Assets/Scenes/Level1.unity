@@ -317,6 +317,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1378752355083169661, guid: eb8095bfde4eb214b9245fae95bacc09, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 198e18dbef77324459b71f70c14f3ea0, type: 3}
+    - target: {fileID: 1378752355083169661, guid: eb8095bfde4eb214b9245fae95bacc09, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378752355083169661, guid: eb8095bfde4eb214b9245fae95bacc09, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378752355083169661, guid: eb8095bfde4eb214b9245fae95bacc09, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248423142882476151, guid: eb8095bfde4eb214b9245fae95bacc09, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
