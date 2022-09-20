@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public int maxHealth = 3;
-     public int damage;
-     public int currentHealth;
-     public HealthBar healthbar;
+    public int damage;
+    public int currentHealth;
+    public HealthBar healthbar;
+    public Text text;
+    public int coinCounter;
 
 
-    void Start(){
+    void Start()
+    {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
     }
@@ -22,6 +26,11 @@ public class Player : MonoBehaviour
         if (coll.gameObject.tag == "Enemy")
         {
             TakeDamage(1);
+        }
+        if (coll.gameObject.tag == "Collectible")
+        {
+            AddCoins();
+            AddCoinCounter();
         }
     }
 
@@ -42,5 +51,16 @@ public class Player : MonoBehaviour
     void Die()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+
+    public void AddCoins()
+    {
+        coinCounter++;
+    }
+
+    public void AddCoinCounter()
+    {
+        text.text = coinCounter.ToString();
     }
 }
