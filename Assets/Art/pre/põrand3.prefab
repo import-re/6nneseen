@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6665648266245877665}
   - component: {fileID: 6665648266245877664}
-  - component: {fileID: 6665648266245877670}
   m_Layer: 0
   m_Name: "p\xF5rand3"
   m_TagString: Untagged
@@ -85,38 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &6665648266245877670
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6665648266245877667}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -6.433937, y: -2.9903607}
-  - {x: -5.7726707, y: -3.0117068}
-  - {x: -5.052014, y: -2.9363866}
-  - {x: -3.7379563, y: -2.7890701}
-  - {x: -2.9797013, y: -2.759014}
-  - {x: -2.243274, y: -2.760921}
-  - {x: -1.4098352, y: -2.7530668}
-  - {x: -0.7940985, y: -2.7683372}
-  - {x: 0.3870721, y: -2.6630905}
-  - {x: 2.3378856, y: -2.5237005}
-  - {x: 3.2684138, y: -2.5306394}
-  - {x: 3.9776254, y: -2.5754704}
-  - {x: 5.053149, y: -2.7193341}
-  - {x: 5.9262295, y: -2.9286532}
-  - {x: 6.434988, y: -3.030978}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
