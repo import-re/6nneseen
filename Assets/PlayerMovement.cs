@@ -34,6 +34,21 @@ public class PlayerMovement : MonoBehaviour {
 
 		anim.SetFloat("HorizontalInput", Mathf.Abs(Input.GetAxis("Horizontal")));
 
+		foreach (Transform iChild in transform)
+		{
+			string tag = iChild.gameObject.tag;
+			Debug.Log(tag);
+			if (tag == "Weapon")
+			{
+				runSpeed = 20f;
+			}
+			else
+			{
+				runSpeed = 40f;
+			}
+
+     	}
+
 	}
 
 

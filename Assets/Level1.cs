@@ -5,33 +5,42 @@ using UnityEngine;
 public class Level1 : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject pauseButt;
 
-
-    void Start()
+    void Update()
+    {
+        if (pauseMenu.active)
+        {
+            pauseButt.SetActive(false);
+        }
+    }
+    public void Start()
     {
         pauseMenu.SetActive(false);
+        pauseButt.SetActive(true);
     }
 
 
 
-    void Resume()
+    public void Resume()
     {
         pauseMenu.SetActive(false);
+        pauseButt.SetActive(true);
     }
 
 
-    void Quit()
+    public void Quit()
     {
         Application.Quit();
     }
 
 
-    void Setting()
+    public void Setting()
     {
         Debug.Log("eskere");
     }
 
-    void Pause()
+    public void Pause()
     {
         pauseMenu.SetActive(true);
     }

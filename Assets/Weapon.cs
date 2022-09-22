@@ -15,13 +15,12 @@ public class Weapon : MonoBehaviour
     public AudioSource shootingSound; 
     public bool isShooting = false;
     public Animator anim;
-    //public Animation shooting;
-    //public UnityEvent OnShootingEvent;
 
 
     void Start()
     {
         shootingSound = GetComponent<AudioSource>();
+        //var PlayerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
 
@@ -38,6 +37,11 @@ public class Weapon : MonoBehaviour
         {
             isShooting = false;
         }
+
+        //if (isShooting)
+        //{
+            //PlayerMovement.runSpeed = 20f;
+        //}
         
     }
 

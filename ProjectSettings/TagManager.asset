@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Object
   - Collectible
+  - PlayerAddidional
   layers:
   - Default
   - TransparentFX
