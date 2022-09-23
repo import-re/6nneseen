@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 3;
-    public int damage;
+    public int maxHealth = 10;
+    //public int damage;
     public int currentHealth;
     public HealthBar healthbar;
     public Text text;
@@ -23,14 +23,26 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "EnemySeen")
         {
-            TakeDamage(1);
+            TakeDamage(2);
         }
         if (coll.gameObject.tag == "Collectible")
         {
             AddCoins();
             AddCoinCounter();
+        }
+        if (coll.gameObject.tag == "Spikes")
+        {
+            TakeDamage(1);
+        }
+        if (coll.gameObject.tag == "EnemyKass")
+        {
+            TakeDamage(4);
+        }
+        if (coll.gameObject.tag == "Boss")
+        {
+            TakeDamage(5);
         }
     }
 

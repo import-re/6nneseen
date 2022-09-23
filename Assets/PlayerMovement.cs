@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour {
 		foreach (Transform iChild in transform)
 		{
 			string tag = iChild.gameObject.tag;
-			Debug.Log(tag);
 			if (tag == "Weapon")
 			{
 				runSpeed = 20f;

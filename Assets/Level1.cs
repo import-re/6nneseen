@@ -5,19 +5,26 @@ using UnityEngine;
 public class Level1 : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public GameObject pauseButt;
 
     void Update()
     {
-        if (pauseMenu.active)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseButt.SetActive(false);
+            if(pauseMenu.activeInHierarchy)
+            {
+                pauseMenu.SetActive(false);
+            }
+            else
+            {
+                pauseMenu.SetActive(true);
+            }
         }
     }
+
+    
     public void Start()
     {
         pauseMenu.SetActive(false);
-        pauseButt.SetActive(true);
     }
 
 
@@ -25,7 +32,6 @@ public class Level1 : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
-        pauseButt.SetActive(true);
     }
 
 

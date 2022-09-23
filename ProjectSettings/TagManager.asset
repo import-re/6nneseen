@@ -4,12 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Bullet
   - Weapon
   - Object
   - Collectible
   - PlayerAddidional
+  - EnemyKass
+  - EnemySeen
+  - Enemy
+  - Grenade
+  - Boss
+  - Spikes
   layers:
   - Default
   - TransparentFX

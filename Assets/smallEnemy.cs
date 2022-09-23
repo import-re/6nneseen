@@ -8,7 +8,6 @@ public class smallEnemy : MonoBehaviour
     public float distance;
     public GameObject bigEnemy;
     public Transform spawnpoint;
-    public int number = 10;
     public Animator anim;
     public bool isDestroyed;
 

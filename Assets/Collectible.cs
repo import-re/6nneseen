@@ -1,6 +1,3 @@
-//Problem: after collision object's being destroyed and "coinCounter++" doesn't work
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +10,6 @@ public class Collectible : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             gameObject.SetActive(false);
-            //Destroy(gameObject);
         }
     }
 }

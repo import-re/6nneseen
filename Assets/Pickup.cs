@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour
     public GameObject player;
 
     private bool weaponHit = false;
-    private bool isBeingHeld = false;
+    //private bool isBeingHeld = false;
 
 
     void Update()
@@ -39,14 +39,14 @@ public class Pickup : MonoBehaviour
     {
         transform.SetParent(player.transform);
         transform.localPosition = new Vector3(0.7f, 0.15f);
-        isBeingHeld = true;
+        //isBeingHeld = true;
     }
 
 
     void DropWeapon()
     {
         transform.parent = null;
-        isBeingHeld = false;
+        //isBeingHeld = false;
         Destroy(gameObject);
         //set parent to null and set the new weapon as a child
     }

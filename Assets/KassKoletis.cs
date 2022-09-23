@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KassKoletis : MonoBehaviour
 {
-    public int ehealth = 120;
 
     public Transform player;
     private Rigidbody2D rb;
@@ -28,36 +27,8 @@ public class KassKoletis : MonoBehaviour
 
     void moveCharacter(Vector2 direction){
         whereToMove = (Vector2)transform.position + (direction * moveSpeed * Time.deltaTime);
-        Debug.Log(whereToMove);
+        //Debug.Log(whereToMove);
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
-
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Bullet")
-        {
-            TakeDamage(1);
-            Destroy(coll.gameObject);
-        }
-    }
-
-
-    public void TakeDamage (int damage)
-    {
-        ehealth -= damage;
-
-        if (ehealth <= 0)
-        {
-            Die();
-        }
-    }
-
-
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-
 }
 

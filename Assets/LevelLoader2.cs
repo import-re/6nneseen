@@ -8,12 +8,15 @@ public class LevelLoader2 : MonoBehaviour
     public string sceneToLoad;
     public GameObject Canvas;
 
-
+    void Start()
+    {
+        //GameObject[] objs = GameObject.FindGameObjectsWithTag("Menu");
+    }
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            DontDestroyOnLoad(Canvas);
+            //DontDestroyOnLoad(Canvas);
             DontDestroyOnLoad(coll.gameObject);
             SceneManager.LoadScene(sceneToLoad);
             //DontDestroyOnLoad(coll.gameObject);

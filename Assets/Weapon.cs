@@ -20,7 +20,6 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         shootingSound = GetComponent<AudioSource>();
-        //var PlayerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
 
@@ -37,12 +36,6 @@ public class Weapon : MonoBehaviour
         {
             isShooting = false;
         }
-
-        //if (isShooting)
-        //{
-            //PlayerMovement.runSpeed = 20f;
-        //}
-        
     }
 
 
@@ -63,7 +56,6 @@ public class Weapon : MonoBehaviour
             bulletPrefab = bulletPrefab3;
         }
         shootingSound.Play();
-        //anim.CrossFade(shooting);
         isShooting = true;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
