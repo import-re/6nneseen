@@ -15,6 +15,7 @@ TagManager:
   - Grenade
   - Boss
   - Spikes
+  - HealthBooster
   layers:
   - Default
   - TransparentFX

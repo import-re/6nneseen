@@ -44,6 +44,10 @@ public class Player : MonoBehaviour
         {
             TakeDamage(5);
         }
+        if(coll.gameObject.tag == "HealthBooster" & currentHealth < maxHealth)
+        {
+            BoostHealth();
+        }
     }
 
 
@@ -71,8 +75,16 @@ public class Player : MonoBehaviour
         coinCounter++;
     }
 
+
     public void AddCoinCounter()
     {
         text.text = coinCounter.ToString();
     }
+
+    public void BoostHealth()
+    {
+        currentHealth++;
+        healthbar.SetHealth(currentHealth);
+    }
+
 }
