@@ -3,3 +3,7 @@
 [0831/162717.453:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
 [0909/231859.811:INFO:CONSOLE(1)] "Long rAF frame-time", source: file:///C:/Program%20Files/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
 [0913/201656.920:INFO:CONSOLE(1)] "Long rAF frame-time", source: file:///C:/Program%20Files/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
+[0924/165920.408:ERROR:local_storage_context_mojo.cc(706)] Lost connection to database
+[0925/000645.735:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0925/000909.136:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0925/000926.841:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
