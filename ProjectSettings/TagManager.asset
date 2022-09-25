@@ -16,6 +16,8 @@ TagManager:
   - Boss
   - Spikes
   - HealthBooster
+  - RohelineKuul
+  - Background
   layers:
   - Default
   - TransparentFX

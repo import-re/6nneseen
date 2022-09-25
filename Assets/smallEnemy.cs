@@ -13,7 +13,11 @@ public class smallEnemy : MonoBehaviour
     public bool wasInvoked = false;
 
 
-
+    void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
+    
     void Update()
     {
         //Debug.Log(distance);

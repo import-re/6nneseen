@@ -14,6 +14,7 @@ public class KassKoletis : MonoBehaviour
 
     void Start(){
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player").transform;
     }
 
 

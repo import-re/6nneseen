@@ -9,7 +9,14 @@ public class Bullet : MonoBehaviour {
 
 	void Start () 
 	{
-		rb.velocity = transform.right * speed;
+		if (gameObject.tag == "Bullet")
+		{
+			rb.velocity = transform.right * speed;
+		}
+		if (gameObject.tag == "RohelineKuul")
+		{
+			rb.velocity = -transform.right * speed;
+		}
 	}
 
 	void OnBecameInvisible()
@@ -20,7 +27,7 @@ public class Bullet : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "Object")
+		if (coll.gameObject.tag != "Player" | coll.gameObject.tag != "Background")
 		{
 			Destroy(gameObject);
 		}

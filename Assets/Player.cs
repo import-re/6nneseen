@@ -48,6 +48,10 @@ public class Player : MonoBehaviour
         {
             BoostHealth();
         }
+        if (coll.gameObject.tag == "RohelineKuul")
+        {
+            TakeDamage(2);
+        }
     }
 
 

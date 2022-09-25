@@ -93,6 +93,7 @@
      <Compile Include="Assets\Bomb.cs" />
      <Compile Include="Assets\DropHeath.cs" />
      <Compile Include="Assets\HealthBooster.cs" />
+     <Compile Include="Assets\VeiderRohelineKoletis.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
