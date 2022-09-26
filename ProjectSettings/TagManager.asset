@@ -18,6 +18,10 @@ TagManager:
   - HealthBooster
   - RohelineKuul
   - Background
+  - VaikeKuul
+  - OranzKoletis
+  - RohelineKoletis
+  - Floor
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public HealthBar healthbar;
     public Text text;
     public int coinCounter;
+    public GameObject BombPrefab;
+    public Transform LaunchOffset;
+    public int GrenadeCount = 5;
 
 
     void Start()
@@ -21,9 +24,28 @@ public class Player : MonoBehaviour
     }
 
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire2") && GrenadeCount > 0)
+        {
+            ThrowGrenade();
+            GrenadeCount--;
+        }
+        else if(GrenadeCount <= 0)
+        {
+            Debug.Log("You don't have any grenades left");
+        }
+    }
+
+
+    void ThrowGrenade()
+    {
+        Instantiate(BombPrefab, LaunchOffset.position, transform.rotation);
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "EnemySeen")
+        if (coll.gameObject.tag == "EnemySeen" | coll.gameObject.tag == "OranzKoletis")
         {
             TakeDamage(2);
         }
@@ -32,7 +54,7 @@ public class Player : MonoBehaviour
             AddCoins();
             AddCoinCounter();
         }
-        if (coll.gameObject.tag == "Spikes")
+        if (coll.gameObject.tag == "Spikes" | coll.gameObject.tag == "VaikeKuul")
         {
             TakeDamage(1);
         }
@@ -47,10 +69,13 @@ public class Player : MonoBehaviour
         if(coll.gameObject.tag == "HealthBooster" & currentHealth < maxHealth)
         {
             BoostHealth();
+            Destroy(coll.gameObject);
         }
         if (coll.gameObject.tag == "RohelineKuul")
         {
+            Debug.Log(coll.gameObject.tag);
             TakeDamage(2);
+            Destroy(coll.gameObject);
         }
     }
 

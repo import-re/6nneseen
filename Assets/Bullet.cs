@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour {
 		{
 			rb.velocity = transform.right * speed;
 		}
-		if (gameObject.tag == "RohelineKuul")
+		if (gameObject.tag == "RohelineKuul" | gameObject.tag == "VaikeKuul")
 		{
 			rb.velocity = -transform.right * speed;
 		}
@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag != "Player" | coll.gameObject.tag != "Background")
+		if (coll.gameObject.tag == "Object")
 		{
 			Destroy(gameObject);
 		}

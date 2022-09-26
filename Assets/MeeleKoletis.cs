@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KassKoletis : MonoBehaviour
+public class MeeleKoletis : MonoBehaviour
 {
-
     public Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -35,4 +34,3 @@ public class KassKoletis : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
-

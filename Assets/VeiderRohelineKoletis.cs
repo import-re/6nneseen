@@ -9,29 +9,50 @@ public class VeiderRohelineKoletis : MonoBehaviour
     public GameObject bulletPrefab;
     public float distance;
      GameObject[] bulletsATM;
-    // Start is called before the first frame update
+    [SerializeField] private float cooldown = 5;
+    private float cooldownTimer;
     void Start()
     {
+        
         player = GameObject.Find("Player").transform;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         distance = player.position.x - transform.position.x;
-        bulletsATM = GameObject.FindGameObjectsWithTag("RohelineKuul");
-        Debug.Log(distance);
+        //bulletsATM = GameObject.FindGameObjectsWithTag("RohelineKuul");
+        //Debug.Log(distance);
 
-        if (Mathf.Abs(distance) < 10 & bulletsATM.Length < 2)
+        if (Mathf.Abs(distance) < 10)
         {
-            InvokeRepeating("Shoot", 0f, 5f);
+            if (gameObject.tag == "RohelineKoletis")
+            {
+                ShootBurst();
+            }
+            else
+            {
+                Shoot();
+            }
         }
 
     }
     
 
+    void ShootBurst()
+    {
+        cooldownTimer -= Time.deltaTime;
+        if (cooldownTimer > 0) return;
+        cooldownTimer = cooldown;
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
     void Shoot()
     {
+        cooldownTimer -= Time.deltaTime;
+        if (cooldownTimer > 0) return;
+        cooldownTimer = cooldown;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
