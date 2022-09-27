@@ -16,26 +16,42 @@ public class Player : MonoBehaviour
     public GameObject BombPrefab;
     public Transform LaunchOffset;
     public int grenadeCount = 5;
-    public Animation anim;
+    public int currentGrenadeCount;
+    public bool hasChecked;
 
 
     void Start()
     {
+        Debug.Log("neeeww");
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        currentGrenadeCount = grenadeCount;
     }
-
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && grenadeCount > 0)
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+        if(!hasChecked)
+            {
+                if(sceneName == "Level3")
+                {
+                    currentGrenadeCount = currentGrenadeCount + coinCounter;
+                    textG.text = currentGrenadeCount.ToString();
+                    hasChecked = true;
+                }
+            }
+        if (Input.GetButtonDown("Fire2"))
         {
-            ThrowGrenade();
-            GrenadeCounting();
-        }
-        else if(grenadeCount <= 0)
-        {
-            Debug.Log("You don't have any grenades left");
+            if(currentGrenadeCount > 0)
+            {
+                ThrowGrenade();
+                GrenadeCounting();
+            }
+            else if(currentGrenadeCount <= 0)
+            {
+                Debug.Log("You don't have any grenades left");
+            }
         }
     }
 
@@ -121,9 +137,9 @@ public class Player : MonoBehaviour
 
     public void GrenadeCounting()
     {
-        anim.Play();
-        grenadeCount--;
-        textG.text = grenadeCount.ToString();
+        //anim.Play();
+        currentGrenadeCount = currentGrenadeCount - 1;
+        textG.text = currentGrenadeCount.ToString();
     }
 
 }

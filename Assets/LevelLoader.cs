@@ -7,6 +7,7 @@ public class LevelLoader2 : MonoBehaviour
 {
     public string sceneToLoad;
     public GameObject Canvas;
+    public Animator crossfade;
 
     void Start()
     {
@@ -18,9 +19,17 @@ public class LevelLoader2 : MonoBehaviour
         {
             //DontDestroyOnLoad(Canvas);
             DontDestroyOnLoad(coll.gameObject);
-            SceneManager.LoadScene(sceneToLoad);
+            StartCoroutine(LoadNextScene());
             //DontDestroyOnLoad(coll.gameObject);
         }
+
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        crossfade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneToLoad);
 
     }
 

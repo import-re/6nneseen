@@ -10,6 +10,7 @@ public class DropHeath : MonoBehaviour
 
     void Start()
     {
+        HealSpawnPoint = GameObject.Find("HealSpawnPoint").transform;
         Scene currentScene = SceneManager.GetActiveScene ();
         string sceneName = currentScene.name;
         if (sceneName == "Level3")

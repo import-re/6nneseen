@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3263047784760120316}
   m_Layer: 0
   m_Name: collectible
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,5 +124,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521558acac523ae4084e4f325ffd02b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  coinCounter: 0

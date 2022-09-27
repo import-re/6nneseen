@@ -6,14 +6,18 @@ using UnityEngine;
 public class Spikes : MonoBehaviour
 {
     public Animator anim;
-    public float distance;
+    public float distanceTillSpikes;
     public Transform player; 
 
 
+    void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
     void Update()
     {
-        distance = player.position.x - transform.position.x;
-        anim.SetFloat("distance", Mathf.Abs(distance));
-        //Debug.Log(distance);
+        distanceTillSpikes = Mathf.Abs(player.position.x - transform.position.x);
+        anim.SetFloat("distanceTillSpikes", distanceTillSpikes);
+        Debug.Log(distanceTillSpikes);
     }
 }
