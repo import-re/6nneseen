@@ -20,7 +20,7 @@ public class Explosion : MonoBehaviour
             {
                 Debug.Log(colliders);
                 rb.AddForce(transform.up * 25f, ForceMode2D.Impulse);
-                //other.TakeDamage(2);
+                other.TakeDamage(2);
             }
 
         }

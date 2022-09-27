@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DropHeath : MonoBehaviour
 {
@@ -9,7 +10,12 @@ public class DropHeath : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Spawn", 5f, 5f);
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+        if (sceneName == "Level3")
+        {
+            InvokeRepeating("Spawn", 10f, 10f);
+        }
     }
 
     void Spawn()

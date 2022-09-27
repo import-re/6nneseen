@@ -11,10 +11,12 @@ public class Player : MonoBehaviour
     public int currentHealth;
     public HealthBar healthbar;
     public Text text;
+    public Text textG;
     public int coinCounter;
     public GameObject BombPrefab;
     public Transform LaunchOffset;
-    public int GrenadeCount = 5;
+    public int grenadeCount = 5;
+    public Animation anim;
 
 
     void Start()
@@ -26,12 +28,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && GrenadeCount > 0)
+        if (Input.GetButtonDown("Fire2") && grenadeCount > 0)
         {
             ThrowGrenade();
-            GrenadeCount--;
+            GrenadeCounting();
         }
-        else if(GrenadeCount <= 0)
+        else if(grenadeCount <= 0)
         {
             Debug.Log("You don't have any grenades left");
         }
@@ -115,6 +117,13 @@ public class Player : MonoBehaviour
     {
         currentHealth++;
         healthbar.SetHealth(currentHealth);
+    }
+
+    public void GrenadeCounting()
+    {
+        anim.Play();
+        grenadeCount--;
+        textG.text = grenadeCount.ToString();
     }
 
 }

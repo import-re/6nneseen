@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   explosion: {fileID: 7393356326723979446}
-  other: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
+  other: {fileID: 7751437963213296724, guid: fd5cbeafa00c85041bcb938828f6617a, type: 3}
 --- !u!82 &7393356326723979446
 AudioSource:
   m_ObjectHideFlags: 0
