@@ -39,5 +39,6 @@ public class Bomb : MonoBehaviour
     void OnDestroy()
     {
         GameObject spawnedParcticle = Instantiate(exploParticles, bombTransform.position, bombTransform.rotation);
+        Destroy(spawnedParcticle, 2);
     }
 }

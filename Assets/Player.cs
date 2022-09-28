@@ -18,11 +18,13 @@ public class Player : MonoBehaviour
     public int grenadeCount = 5;
     public int currentGrenadeCount;
     public bool hasChecked;
+    public Pickup weapon;
+    public bool weaponIsAttached;
 
 
     void Start()
     {
-        Debug.Log("neeeww");
+        //Debug.Log("neeeww");
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
         currentGrenadeCount = grenadeCount;
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour
                     hasChecked = true;
                 }
             }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetKeyDown("g"))
         {
             if(currentGrenadeCount > 0)
             {
@@ -52,6 +54,16 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("You don't have any grenades left");
             }
+        }
+
+
+        foreach (Transform iChild in transform)
+        {
+         string tag = iChild.gameObject.tag;
+         if (tag == "Weapon" | tag == "Meele")
+         {
+            weaponIsAttached = true;
+         }
         }
     }
 

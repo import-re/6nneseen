@@ -6,9 +6,8 @@ public class Explosion : MonoBehaviour
 {
     public float radius = 100; 
     public AudioSource explosion; 
-    public EnemyHealth other;
-    //public GameObject PlayerScript;
-    // Start is called before the first frame update
+    public EnemyHealth enemy;
+
     void Start()
     {
         explosion.Play();
@@ -20,19 +19,11 @@ public class Explosion : MonoBehaviour
             {
                 Debug.Log(colliders);
                 rb.AddForce(transform.up * 25f, ForceMode2D.Impulse);
-                other.TakeDamage(2);
+                enemy.TakeDamage(2);
             }
 
         }
-        Destroy(gameObject, 0.5f);
-        //hasExploded = true;
     }
 
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

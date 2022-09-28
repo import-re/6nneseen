@@ -41,7 +41,7 @@ public class smallEnemy : MonoBehaviour
     void transformEnemy()
     {
         Destroy(gameObject);
-        Instantiate(bigEnemy, spawnpoint.position, spawnpoint.rotation);
+        GameObject bigMartinEnemy = Instantiate(bigEnemy, spawnpoint.position, spawnpoint.rotation);
     }
 
 }

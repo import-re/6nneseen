@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2689123981525082174}
   - component: {fileID: 2689123981525082175}
   - component: {fileID: 7751437963213296724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: martini_koletis1 1
   m_TagString: EnemySeen
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1344137591
+  m_SortingLayerID: 1929488007
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 86bea189f918d7a46b18d73892037795, type: 3}

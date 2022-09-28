@@ -18,6 +18,6 @@ public class Spikes : MonoBehaviour
     {
         distanceTillSpikes = Mathf.Abs(player.position.x - transform.position.x);
         anim.SetFloat("distanceTillSpikes", distanceTillSpikes);
-        Debug.Log(distanceTillSpikes);
+        //Debug.Log(distanceTillSpikes);
     }
 }

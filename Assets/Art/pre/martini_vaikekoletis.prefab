@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3059394746734524954}
   - component: {fileID: 3059394746734524958}
   - component: {fileID: 4188614625029362369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: martini_vaikekoletis
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2117097299
-  m_SortingLayer: 5
+  m_SortingLayerID: 1929488007
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be4e1566ffc30f44a8d0fcf32cca37b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -152,9 +152,9 @@ MonoBehaviour:
   distance: 0
   bigEnemy: {fileID: 2689123981525082168, guid: fd5cbeafa00c85041bcb938828f6617a, type: 3}
   spawnpoint: {fileID: 3059394748315551444}
-  number: 10
   anim: {fileID: 4188614625029362369}
   isDestroyed: 0
+  wasInvoked: 0
 --- !u!95 &4188614625029362369
 Animator:
   serializedVersion: 4

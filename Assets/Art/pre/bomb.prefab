@@ -100,16 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7406d77ea78cf264ca97d68da03da58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 4
   LaunchOffset: {x: 2, y: 1, z: 0}
-  Thrown: 1
-  explosion: {fileID: 0}
-  exploParticles: {fileID: 4303311964983293694, guid: fb9ceddf2f215dc44b9fb9869496b5ae, type: 3}
-  timer: 2
+  Thrown: 224
+  exploParticles: {fileID: 3797135566573823887, guid: 97cafa03323e0424594616023f745d83, type: 3}
+  timer: 8.07e-43
   bombTransform: {fileID: 5658629457448764249}
-  circle: {fileID: 0}
-  radius: 0
-  force: 500
 --- !u!61 &4341864471205248007
 BoxCollider2D:
   m_ObjectHideFlags: 0

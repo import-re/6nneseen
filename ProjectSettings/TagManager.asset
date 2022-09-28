@@ -23,6 +23,7 @@ TagManager:
   - RohelineKoletis
   - Floor
   - HealSpawnPoint
+  - Meele
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - UI
   - Platform
   - 
-  - 
+  - Enemies
   - Player
   - Background
   - 
@@ -74,6 +75,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2117097299
+    locked: 0
+  - name: Enemies
+    uniqueID: 1929488007
     locked: 0
   - name: Objects
     uniqueID: 2950829705
