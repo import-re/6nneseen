@@ -46,7 +46,7 @@ public class Pickup : MonoBehaviour
         transform.SetParent(player.transform);
         if(gameObject.tag == "Meele")
         {
-            transform.localPosition = new Vector3(0.75f, 0.7f);
+            transform.localPosition = new Vector3(0.9f, 0.6f);
         }
         else
         {
