@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public GameObject player;
+    public GameObject Pyss;
+    public GameObject Pudel;
 
     private bool weaponHit = false;
     //private bool isAttached;
@@ -15,6 +17,8 @@ public class Pickup : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        GameObject Pudel = GameObject.FindGameObjectWithTag("Meele");
+        GameObject Pyss = GameObject.FindGameObjectWithTag("Weapon");
     }
     void Update()
     {
@@ -44,7 +48,7 @@ public class Pickup : MonoBehaviour
     void PickUp()
     {
         transform.SetParent(player.transform);
-        if(gameObject.tag == "Meele")
+        if(gameObject == Pudel)
         {
             transform.localPosition = new Vector3(0.9f, 0.6f);
         }
@@ -61,7 +65,17 @@ public class Pickup : MonoBehaviour
     {
         transform.parent = null;
         pickUphasBeenCalled = false;
-        Destroy(gameObject);
+
+        if(gameObject == Pudel)
+        {
+            Destroy(Pudel);
+        }
+
+        else
+        {
+            Destroy(Pyss);    
+        }
+        
         //set parent to null and set the new weapon as a child
     }
 }
