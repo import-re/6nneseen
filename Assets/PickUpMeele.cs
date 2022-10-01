@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class PickUpMeele : MonoBehaviour
 {
+    // Start is called before the first frame update
+    
     public GameObject player;
     public GameObject Pyss;
     public GameObject Pudel;
@@ -14,26 +16,27 @@ public class Pickup : MonoBehaviour
     public Player playerScript;
 
 
+
+//check if Player has a child with tag "Meele", if not pick up.
+//If
     void Start()
     {
+        player = GameObject.Find("Player");
+        //GameObject Pudel = GameObject.FindGameObjectWithTag("Meele");
+        //GameObject Pyss = GameObject.FindGameObjectWithTag("Weapon");
     }
     void Update()
     {
-        player = GameObject.Find("Player");
-        Pudel = GameObject.FindGameObjectWithTag("Meele");
-        Pyss = GameObject.FindGameObjectWithTag("Weapon");
-        Debug.Log("weaponIsAttached" + playerScript.weaponIsAttached);
-        Debug.Log("pickUphasBeenCalled" + pickUphasBeenCalled);
         if (weaponHit && Input.GetKeyDown(KeyCode.E) & !playerScript.weaponIsAttached)
         {
             PickUp();
         }
 
 
-        /*if (Input.GetKeyDown("q") && playerScript.weaponIsAttached)
+        if (Input.GetKeyDown("q") && playerScript.weaponIsAttached)
         {
             DropWeapon();
-        }*/
+        }
     }
 
 
@@ -50,16 +53,9 @@ public class Pickup : MonoBehaviour
     void PickUp()
     {
         transform.SetParent(player.transform);
-        if(gameObject == Pudel)
-        {
-            transform.localPosition = new Vector3(0.9f, 0.6f);
-        }
-        else
-        {
-            transform.localPosition = new Vector3(0.7f, 0.15f);
-        }
+        transform.localPosition = new Vector3(0.9f, 0.6f);
         pickUphasBeenCalled = true;
-        //Debug.Log("eskere");
+        Debug.Log("eskere");
     }
 
 
@@ -67,19 +63,8 @@ public class Pickup : MonoBehaviour
     {
         transform.parent = null;
         pickUphasBeenCalled = false;
+        Destroy(gameObject);    
 
-        if(gameObject == Pudel)
-        {
-            Pudel.SetActive(false);
-            //Destroy(Pudel);
-        }
-
-        else
-        {
-            Pyss.SetActive(false);
-            //Destroy(Pyss);    
-        }
-        
         //set parent to null and set the new weapon as a child
     }
 }

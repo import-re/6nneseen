@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public bool hasChecked;
     public Pickup weapon;
     public bool weaponIsAttached;
+    public GameObject Weapon;
 
 
     void Start()
@@ -62,7 +63,16 @@ public class Player : MonoBehaviour
          string tag = iChild.gameObject.tag;
          if (tag == "Weapon" | tag == "Meele")
          {
+            //iChild = GameObject Weapon;
             weaponIsAttached = true;
+            if (Input.GetKeyDown("q"))
+            {
+                Destroy(iChild.gameObject);
+            }
+         }
+         else
+         {
+            weaponIsAttached = false;
          }
         }
     }

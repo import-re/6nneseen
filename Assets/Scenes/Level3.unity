@@ -940,7 +940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2138744343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189e2cdb98845d740ad3c905c7fec20a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f9a165bb7c7f5c4887288cc83af7c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthBooster: {fileID: 6187791640236216162, guid: 626acf60bc9c8ba4fbd87e3ef2ca0094, type: 3}

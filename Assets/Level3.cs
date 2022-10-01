@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DropHeath : MonoBehaviour
+public class Level3 : MonoBehaviour
 {
+    // Start is called before the first frame update
     public GameObject healthBooster;
     public Transform HealSpawnPoint;
 
@@ -15,7 +16,6 @@ public class DropHeath : MonoBehaviour
         string sceneName = currentScene.name;
         if (sceneName == "Level3")
         {
-            
             InvokeRepeating("Spawn", 10f, 10f);
         }
     }
