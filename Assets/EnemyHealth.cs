@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        Debug.Log(damage + "Damage was takes");
+        Debug.Log(damage + " damage was taken");
         ehealth -= damage;
 
         if (ehealth <= 0)
@@ -39,7 +39,8 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 
 }

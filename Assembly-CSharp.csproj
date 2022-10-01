@@ -101,8 +101,6 @@
      <Compile Include="Assets\Collectible.cs" />
      <Compile Include="Assets\Level3.cs" />
      <Compile Include="Assets\ColelctibleCounter.cs" />
-     <Compile Include="Assets\PickUpGun.cs" />
-     <Compile Include="Assets\PickUpMeele.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

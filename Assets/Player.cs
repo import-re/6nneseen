@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public Pickup weapon;
     public bool weaponIsAttached;
     public GameObject Weapon;
+    public float cooldown;
+    public float StartBeforeEnemyAttack;
 
 
     void Start()
@@ -75,6 +77,18 @@ public class Player : MonoBehaviour
             weaponIsAttached = false;
          }
         }
+
+        if(sceneName == "Level1")
+        {
+            if(transform.position.x >= 114)
+            {
+                transform.position = new Vector3(114, transform.position.y, 0);
+            }
+            if(transform.position.x < 0)
+            {
+                transform.position = new Vector3(0, transform.position.y, 0);
+            }
+        }
     }
 
 
@@ -87,8 +101,17 @@ public class Player : MonoBehaviour
     {
         if (coll.gameObject.tag == "EnemySeen" | coll.gameObject.tag == "OranzKoletis")
         {
-            TakeDamage(2);
+            if(cooldown <= 0)
+            {
+                TakeDamage(2);
+                cooldown = StartBeforeEnemyAttack;
+            }
+            else
+            {
+                cooldown -= Time.deltaTime;    
+            }
         }
+
         if (coll.gameObject.tag == "Collectible")
         {
             AddCoins();
@@ -113,7 +136,7 @@ public class Player : MonoBehaviour
         }
         if (coll.gameObject.tag == "RohelineKuul")
         {
-            Debug.Log(coll.gameObject.tag);
+            //Debug.Log(coll.gameObject.tag);
             TakeDamage(2);
             Destroy(coll.gameObject);
         }
@@ -122,7 +145,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        Debug.Log("gucci gang");
+        //Debug.Log("gucci gang");
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
 

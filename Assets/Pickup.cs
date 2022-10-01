@@ -22,8 +22,8 @@ public class Pickup : MonoBehaviour
         player = GameObject.Find("Player");
         Pudel = GameObject.FindGameObjectWithTag("Meele");
         Pyss = GameObject.FindGameObjectWithTag("Weapon");
-        Debug.Log("weaponIsAttached" + playerScript.weaponIsAttached);
-        Debug.Log("pickUphasBeenCalled" + pickUphasBeenCalled);
+        //Debug.Log("weaponIsAttached" + playerScript.weaponIsAttached);
+       // Debug.Log("pickUphasBeenCalled" + pickUphasBeenCalled);
         if (weaponHit && Input.GetKeyDown(KeyCode.E) & !playerScript.weaponIsAttached)
         {
             PickUp();

@@ -22,7 +22,7 @@ public class MeeleWeapon : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && isBeingHeld)
             {
                 Attack();
-                Debug.Log("attacking");
+                //Debug.Log("attacking");
                 isAttacking = true;
             }
             timeBtwAttack = startTimeBtwAttack;
