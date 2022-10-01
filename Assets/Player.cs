@@ -77,18 +77,6 @@ public class Player : MonoBehaviour
             weaponIsAttached = false;
          }
         }
-
-        if(sceneName == "Level1")
-        {
-            if(transform.position.x >= 114)
-            {
-                transform.position = new Vector3(114, transform.position.y, 0);
-            }
-            if(transform.position.x < 0)
-            {
-                transform.position = new Vector3(0, transform.position.y, 0);
-            }
-        }
     }
 
 

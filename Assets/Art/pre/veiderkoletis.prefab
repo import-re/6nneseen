@@ -104,7 +104,7 @@ MonoBehaviour:
   player: {fileID: 0}
   bulletPrefab: {fileID: 8766351903602480042, guid: 100dbe58478c4b041a72cd4a33883642, type: 3}
   distance: 0
-  cooldown: 5
+  cooldown: 9
 --- !u!114 &4661854451238707582
 MonoBehaviour:
   m_ObjectHideFlags: 0

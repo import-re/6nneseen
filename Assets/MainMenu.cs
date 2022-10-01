@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public AudioSource buttonSound;
     public AudioSource exitSound;
+    public GameObject optionsMenu;
     //public GameObject OptionsScreen;
 
 
@@ -14,6 +15,8 @@ public class MainMenu : MonoBehaviour
     {
         buttonSound = GetComponent<AudioSource>();
         exitSound = GetComponent<AudioSource>();
+        optionsMenu.SetActive(false);
+
     }
 
 
@@ -39,7 +42,12 @@ public class MainMenu : MonoBehaviour
     public void loadOptions()
     {
         buttonSound.Play();
-        SceneManager.LoadScene("Options");
-        //OptionsScreen.SetActive(true);
+        optionsMenu.SetActive(true);
+    }
+
+    public void closeOptions()
+    {
+        buttonSound.Play();
+        optionsMenu.SetActive(false);
     }
 }

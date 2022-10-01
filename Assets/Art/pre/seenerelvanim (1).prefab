@@ -253,7 +253,7 @@ MonoBehaviour:
   Pyss: {fileID: 0}
   Pudel: {fileID: 0}
   pickUphasBeenCalled: 0
-  playerScript: {fileID: 0}
+  playerScript: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
 --- !u!114 &1321563045808163125
 MonoBehaviour:
   m_ObjectHideFlags: 0

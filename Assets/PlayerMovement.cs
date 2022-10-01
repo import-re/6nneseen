@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
 			string tag = iChild.gameObject.tag;
 			if (tag == "Weapon")
 			{
-				runSpeed = 20f;
+				runSpeed = 30f;
 			}
 			else
 			{
