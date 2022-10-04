@@ -6,7 +6,7 @@ public class MeeleWeapon : MonoBehaviour
 {
     public bool isBeingHeld = false;
     private float timeBtwAttack;
-    private float startTimeBtwAttack;
+    public float startTimeBtwAttack = 1;
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
@@ -59,13 +59,11 @@ public class MeeleWeapon : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKey("1") && isBeingHeld)
-            {
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for(int i =0; i < enemiesToDamage.Length; i++)
-                {
-                    enemy.TakeDamage(1);
-                }
-            }
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+        for(int i =0; i < enemiesToDamage.Length; i++)
+        {
+            enemy.TakeDamage(1);
+        }
+    
     }
 }

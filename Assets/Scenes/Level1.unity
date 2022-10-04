@@ -248,6 +248,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1344137591
       objectReference: {fileID: 0}
+    - target: {fileID: 8657568338962780207, guid: 66de2267a06ef724585d52a6e9bd6db1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a6712cea619d0e748824c1187734069f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66de2267a06ef724585d52a6e9bd6db1, type: 3}
 --- !u!1001 &91570620
@@ -652,7 +656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1329684332175631610, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1329684332175631610, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: m_TagString
@@ -2625,7 +2629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1633047682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,7 +2707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633047681}
   m_LocalRotation: {x: 0.017605528, y: -0.008973049, z: 0.3378173, w: 0.9410043}
-  m_LocalPosition: {x: 10.61, y: 1.05, z: 0.27}
+  m_LocalPosition: {x: 16.35, y: -0.35, z: 0.25}
   m_LocalScale: {x: 0.5207864, y: 0.5207864, z: 0.5207864}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2749,6 +2753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingHeld: 0
+  startTimeBtwAttack: 0
   attackPos: {fileID: 353444568}
   attackRange: 3.55
   whatIsEnemies:
