@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public GameObject Weapon;
     public float cooldown;
     public float StartBeforeEnemyAttack;
+    public Animator bombAnim;
 
 
     void Start()
@@ -171,6 +172,7 @@ public class Player : MonoBehaviour
     public void GrenadeCounting()
     {
         //anim.Play();
+        //bombAnim.SetTrigger("BombBlink");
         currentGrenadeCount = currentGrenadeCount - 1;
         textG.text = currentGrenadeCount.ToString();
     }

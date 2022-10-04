@@ -7,7 +7,9 @@ public class AnimationPlay : MonoBehaviour
     //[SerializeField] private Animator anim;
     // Start is called before the first frame update
     public Animator anim;
-    [SerializeField]private string bombBlink = "grenadeBlinks";
+    public bool grenadeThrown;
+    public Player player;
+    public bool grenadeOut;
     void Start()
     {
         
@@ -16,11 +18,22 @@ public class AnimationPlay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        anim.SetBool("grenadeTrown", grenadeThrown);
+        anim.SetBool("grenadeOut", grenadeOut);
+        if (Input.GetKeyDown("g") & player.grenadeCount > 0)
         {
-            //Debug.Log("eskere");
-            anim.Play(bombBlink, 0, 0f);
-            //anim.Play(bombBlink);
+            grenadeThrown = true;
+
+        }
+        if (Input.GetKeyDown("g") & player.grenadeCount <= 0)
+        {
+            grenadeOut = true;
+
+        }
+        if (Input.GetKeyDown("g"))
+        {
+            grenadeThrown = false;
+            grenadeOut = false;
         }
     }
 }

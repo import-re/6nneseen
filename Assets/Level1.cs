@@ -5,6 +5,7 @@ using UnityEngine;
 public class Level1 : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject bombCounter;
 
     void Update()
     {
@@ -12,11 +13,11 @@ public class Level1 : MonoBehaviour
         {
             if(pauseMenu.activeInHierarchy)
             {
-                pauseMenu.SetActive(false);
+                unPause();
             }
             else
             {
-                pauseMenu.SetActive(true);
+                Pause();
             }
         }
     }
@@ -25,14 +26,15 @@ public class Level1 : MonoBehaviour
     public void Start()
     {
         pauseMenu.SetActive(false);
+        bombCounter.SetActive(true);
     }
 
 
 
-    public void Resume()
+    /*public void Resume()
     {
         pauseMenu.SetActive(false);
-    }
+    }*/
 
 
     public void Quit()
@@ -49,5 +51,12 @@ public class Level1 : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
+        bombCounter.SetActive(false);
+    }
+
+    public void unPause()
+    {
+        pauseMenu.SetActive(false);
+        bombCounter.SetActive(true);
     }
 }
