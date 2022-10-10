@@ -10,13 +10,13 @@ public class OptionsMenu : MonoBehaviour
 
     void Start()
     {
-        closeSound = GetComponent<AudioSource>();
+        //closeSound = GetComponent<AudioSource>();
     }
 
     public void closeOptions()
     {
-        closeSound.Play();
-        SceneManager.LoadScene("StartPage");
+        //closeSound.Play();
+
     }
     
 }

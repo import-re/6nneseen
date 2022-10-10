@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   distance: 0
-  bigEnemy: {fileID: 2689123981525082168, guid: fd5cbeafa00c85041bcb938828f6617a, type: 3}
+  bigEnemy: {fileID: 6894727103166326548, guid: 8096294bfe928054b854eac6b65b5c2d, type: 3}
   spawnpoint: {fileID: 3059394748315551444}
   anim: {fileID: 4188614625029362369}
   isDestroyed: 0

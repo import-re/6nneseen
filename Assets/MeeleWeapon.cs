@@ -10,9 +10,10 @@ public class MeeleWeapon : MonoBehaviour
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
-    public EnemyHealth enemy;
+    public EnemyHealth enemyHealthScript;
     public Animator anim;
     public bool isAttacking;
+    public GameObject enemy1;
 
 
     void Update()
@@ -66,7 +67,15 @@ public class MeeleWeapon : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         if (enemiesToDamage != null)
         {
-            enemy.TakeDamage(9);
+            foreach (Collider2D enemy in enemiesToDamage)
+            {
+                GameObject enemy1 = enemy.gameObject;
+
+                if(enemy1.activeInHierarchy)
+                {
+                    enemyHealthScript.TakeDamage(1);
+                }
+            }
         }
         
         /*for(int i =0; i < enemiesToDamage.Length; i++)

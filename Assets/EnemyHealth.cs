@@ -5,8 +5,15 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int ehealth;
+    public LillaSeen lillaSeeneScript;
 
-
+    void Start()
+    {
+        if (gameObject.tag == "EnemySeen")
+        {
+            ehealth = lillaSeeneScript.lillaSeenHealth;
+        }
+    }
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Bullet")
@@ -26,9 +33,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        Debug.Log(gameObject.name + damage + " damage was taken");
         ehealth -= damage;
-
+        Debug.Log(ehealth);
         if (ehealth <= 0)
         {
             Die();
@@ -39,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     
     {
+        Debug.Log("Die");
         gameObject.SetActive(false);
         //Destroy(gameObject);
     }
