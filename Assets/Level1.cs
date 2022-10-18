@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level1 : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public GameObject bombCounter;
+    //public GameObject bombCounter;
 
     void Update()
     {
@@ -26,7 +26,7 @@ public class Level1 : MonoBehaviour
     public void Start()
     {
         pauseMenu.SetActive(false);
-        bombCounter.SetActive(true);
+        //bombCounter.SetActive(true);
     }
 
 
@@ -51,12 +51,12 @@ public class Level1 : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
-        bombCounter.SetActive(false);
+        //bombCounter.SetActive(false);
     }
 
     public void unPause()
     {
         pauseMenu.SetActive(false);
-        bombCounter.SetActive(true);
+        //bombCounter.SetActive(true);
     }
 }

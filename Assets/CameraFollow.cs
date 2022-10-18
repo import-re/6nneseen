@@ -8,18 +8,21 @@ public class CameraFollow : MonoBehaviour
     public float FollowSpeed = 2f;
     public float yOffset =1f;
     public Transform target;
+    public GameObject PlayerPrefub;
+    public Transform playerSpawn;
     //private float _fixedHeight;
     //public Transform target;
 
     void Start()
     {
-        target = GameObject.Find("Player").transform;
-        //_fixedHeight = transform.position.y;
+        //target = GameObject.Find("Player").transform;
+        ///_fixedHeight = transform.position.y;
     }
 
 
     void Update()
     {
+        target = GameObject.Find("Player").transform;
 
         var yAxis = new Dictionary<string, float>()
         {
@@ -30,7 +33,17 @@ public class CameraFollow : MonoBehaviour
 
         Scene currentScene = SceneManager.GetActiveScene ();
         string sceneName = currentScene.name;
-  
+        if(target is null)
+        {
+            if (sceneName == "Level1")
+            {
+                Instantiate(PlayerPrefub, playerSpawn.position, playerSpawn.rotation);
+            }
+        }
+        else
+        {
+            Debug.Log("Player found");
+        }
         float _fixedHeight;
         if (yAxis.TryGetValue(sceneName, out _fixedHeight))
         {

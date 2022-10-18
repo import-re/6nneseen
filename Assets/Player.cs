@@ -90,7 +90,8 @@ public class Player : MonoBehaviour
     {
         if (coll.gameObject.tag == "EnemySeen" | coll.gameObject.tag == "OranzKoletis")
         {
-            if(cooldown <= 0)
+            TakeDamage(2);
+            /*if(cooldown <= 0)
             {
                 TakeDamage(2);
                 cooldown = StartBeforeEnemyAttack;
@@ -98,7 +99,7 @@ public class Player : MonoBehaviour
             else
             {
                 cooldown -= Time.deltaTime;    
-            }
+            }*/
         }
 
         if (coll.gameObject.tag == "Collectible")

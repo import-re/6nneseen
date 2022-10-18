@@ -5,13 +5,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int ehealth;
-    public LillaSeen lillaSeeneScript;
 
     void Start()
     {
+        gameObject.SetActive(true);
         if (gameObject.tag == "EnemySeen")
         {
-            ehealth = lillaSeeneScript.lillaSeenHealth;
+            ehealth = 9;
         }
     }
     void OnCollisionEnter2D(Collision2D coll)

@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1344137591
-  m_SortingLayer: 7
+  m_SortingLayerID: 2117097299
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ee26145094c105458e072e56acd0ff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -153,19 +153,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7696286898308747baae96d2aebd4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 10
   currentHealth: 0
-  healthbar: {fileID: 6109984736841524282, guid: dee73341183d319498f3cff3520222cb, type: 3}
+  healthbar: {fileID: 0}
   text: {fileID: 0}
   textG: {fileID: 0}
   coinCounter: 0
-  BombPrefab: {fileID: 0}
+  BombPrefab: {fileID: 4341864471205248011, guid: 093e28e017e43fb4fb03aa03cf11ee95, type: 3}
   LaunchOffset: {fileID: 0}
   grenadeCount: 5
   currentGrenadeCount: 0
   hasChecked: 0
-  weapon: {fileID: 0}
+  weapon: {fileID: 1321563045808163126, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
   weaponIsAttached: 0
+  Weapon: {fileID: 0}
+  cooldown: 0
+  StartBeforeEnemyAttack: 2
+  bombAnim: {fileID: 0}
 --- !u!114 &7080748288546696747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,10 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada78049340b75c48bf4ee7a2c0c296c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 600
+  m_JumpForce: 1000
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 64

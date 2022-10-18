@@ -18,6 +18,7 @@ public class MeeleWeapon : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(whatIsEnemies);
         anim.SetBool("isAttacking", isAttacking);
         CheckIfIsBeingHeld();
         Debug.Log(timeBtwAttack);

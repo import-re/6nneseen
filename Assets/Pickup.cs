@@ -12,6 +12,7 @@ public class Pickup : MonoBehaviour
     //private bool isAttached;
     public bool pickUphasBeenCalled;
     public Player playerScript;
+    public CharacterController2D playerMovingScript;
 
 
     void Start()
@@ -24,7 +25,7 @@ public class Pickup : MonoBehaviour
         Pyss = GameObject.FindGameObjectWithTag("Weapon");
         //Debug.Log("weaponIsAttached" + playerScript.weaponIsAttached);
        // Debug.Log("pickUphasBeenCalled" + pickUphasBeenCalled);
-        if (weaponHit && Input.GetKeyDown(KeyCode.E) & !playerScript.weaponIsAttached)
+        if (weaponHit && Input.GetKeyDown(KeyCode.E) && !playerScript.weaponIsAttached && playerMovingScript.m_FacingRight)
         {
             PickUp();
         }

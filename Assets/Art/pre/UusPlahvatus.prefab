@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 4
   explosion: {fileID: 7766781068566593372}
-  enemy: {fileID: 7751437963213296724, guid: fd5cbeafa00c85041bcb938828f6617a, type: 3}
+  enemy: {fileID: 1255921573990994808, guid: 8096294bfe928054b854eac6b65b5c2d, type: 3}
 --- !u!82 &7766781068566593372
 AudioSource:
   m_ObjectHideFlags: 0

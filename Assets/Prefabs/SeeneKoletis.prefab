@@ -14,14 +14,13 @@ GameObject:
   - component: {fileID: 6894727103166326546}
   - component: {fileID: 6894727103166326547}
   - component: {fileID: 1255921573990994808}
-  - component: {fileID: 8668829358508612339}
   m_Layer: 8
   m_Name: SeeneKoletis
   m_TagString: EnemySeen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6894727103166326545
 Transform:
   m_ObjectHideFlags: 0
@@ -168,18 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639aa0f1416e783469abc2bac545f046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ehealth: 9
-  lillaSeeneScript: {fileID: 8668829358508612339}
---- !u!114 &8668829358508612339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6894727103166326548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49e0ca64f6922c40897a969d8dee7b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lillaSeenHealth: 9
+  ehealth: -3

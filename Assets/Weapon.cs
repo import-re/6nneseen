@@ -7,7 +7,6 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public bool isBeingHeld = false;
     public int bulletType;
     public GameObject bulletPrefab1;
     public GameObject bulletPrefab2;
@@ -15,6 +14,7 @@ public class Weapon : MonoBehaviour
     public AudioSource shootingSound; 
     public bool isShooting = false;
     public Animator anim;
+    public CharacterController2D playerMovingScript;
 
 
     void Start()
@@ -25,17 +25,22 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        anim.SetBool("isShooting", isShooting);
-        CheckIfIsBeingHeld();
-        if (Input.GetButtonDown("Fire1") && isBeingHeld)
-        {
-            ShootRandom();
-        }
         
-        else if (Input.GetButtonUp("Fire1"))
+        anim.SetBool("isShooting", isShooting);
+        if (transform.parent != null)
         {
-            isShooting = false;
+            if (Input.GetButtonDown("Fire1") && playerMovingScript.m_FacingRight)
+            {
+                ShootRandom();
+            }
+            
+            else if (Input.GetButtonUp("Fire1"))
+            {
+                isShooting = false;
+            }
+            
         }
+        Debug.Log(playerMovingScript.m_FacingRight);
     }
 
 
@@ -58,19 +63,5 @@ public class Weapon : MonoBehaviour
         shootingSound.Play();
         isShooting = true;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    }
-
-
-    void CheckIfIsBeingHeld()
-    {
-        if (transform.parent == null)
-        {
-            isBeingHeld = false;
-        }
-
-        else
-        {
-            isBeingHeld = true;
-        }
     }
 }
