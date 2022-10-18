@@ -30,7 +30,7 @@ public class AnimationPlay : MonoBehaviour
             grenadeOut = true;
 
         }
-        if (Input.GetKeyDown("g"))
+        if (Input.GetKeyUp("g"))
         {
             grenadeThrown = false;
             grenadeOut = false;

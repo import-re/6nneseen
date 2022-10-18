@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int ehealth;
+    public static int ehealth;
+    public int currentEhealth;
 
-    void Start()
+    void Awake()
     {
-        gameObject.SetActive(true);
-        if (gameObject.tag == "EnemySeen")
+        //gameObject.SetActive(true);
+        /*if (gameObject.tag == "EnemySeen")
         {
             ehealth = 9;
-        }
+        }*/
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
