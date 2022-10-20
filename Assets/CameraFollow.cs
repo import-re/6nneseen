@@ -42,7 +42,7 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            Debug.Log("Player found");
+            //Debug.Log("Player found");
         }
         float _fixedHeight;
         if (yAxis.TryGetValue(sceneName, out _fixedHeight))

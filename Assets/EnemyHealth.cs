@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public static int ehealth;
-    public int currentEhealth;
+    //private static int ehealth = 9;
+    //private int currentEhealth = 0;
+    //int currentEHealth;
+    int currentEhealth;
+    string enemyType;
 
     void Awake()
     {
@@ -15,6 +18,38 @@ public class EnemyHealth : MonoBehaviour
             ehealth = 9;
         }*/
     }
+
+    void Update()
+    {
+        //Debug.Log($"{enemyType} is {currentEhealth}");
+        Debug.Log(currentEhealth);
+    }
+
+    void Start()
+    {
+        //currentEhealth = ehealth;
+        var EnemyHealthes = new Dictionary<string, int>()
+        {
+            {"EnemySeen", 9},
+            {"EnemyKass", 12},
+            {"OranzKoletis", 6},
+            {"RohelineKoletis", 9},
+            {"Boss", 35}
+        };
+        string enemyType = gameObject.tag;
+        int eHealth;
+        //int currentEhealth;
+        //Debug.Log(enemyType);
+        if (EnemyHealthes.TryGetValue(enemyType, out eHealth))
+        {
+            currentEhealth = eHealth;
+        }
+
+        //string enemyType = gameObject.tag;
+        //private static int ehealth;
+    }
+
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Bullet")
@@ -34,9 +69,9 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        ehealth -= damage;
-        Debug.Log(ehealth);
-        if (ehealth <= 0)
+        currentEhealth -= damage;
+        //Debug.Log(ehealth);
+        if (currentEhealth <= 0)
         {
             Die();
         }

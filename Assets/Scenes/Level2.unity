@@ -2401,6 +2401,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1226729848802674393, guid: 75763ede238131a488b9fefffa2d6c3a, type: 3}
+      propertyPath: m_TagString
+      value: EnemyKass
+      objectReference: {fileID: 0}
     - target: {fileID: 1226729848802674396, guid: 75763ede238131a488b9fefffa2d6c3a, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -3421,7 +3425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1329684332175631610, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1329684332175631610, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: m_TagString

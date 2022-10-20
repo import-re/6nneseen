@@ -18,10 +18,10 @@ public class MeeleWeapon : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(whatIsEnemies);
+        //Debug.Log(whatIsEnemies);
         anim.SetBool("isAttacking", isAttacking);
         CheckIfIsBeingHeld();
-        Debug.Log(timeBtwAttack);
+        //Debug.Log(timeBtwAttack);
         if(timeBtwAttack <= 0)
         {
             if (Input.GetButtonDown("Fire1") && isBeingHeld)

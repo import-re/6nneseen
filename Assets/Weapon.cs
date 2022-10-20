@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
             }
             
         }
-        Debug.Log(playerMovingScript.m_FacingRight);
+        //Debug.Log(playerMovingScript.m_FacingRight);
     }
 
 
