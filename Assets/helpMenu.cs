@@ -7,11 +7,15 @@ public class helpMenu : MonoBehaviour
 {
     //public Button helpButton;
     public GameObject helpImage;
+    public GameObject AllMenu;
+    public GameObject helpText;
+    public Level1 pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
         //helpButton.SetActive(true);
         helpImage.SetActive(false);
+        helpText.SetActive(true);
     }
 
 
@@ -22,10 +26,13 @@ public class helpMenu : MonoBehaviour
             if (helpImage.activeInHierarchy)
             {
                 closeHelpMenu();
+                AllMenu.SetActive(true);
             }
             else
             {
+                helpText.SetActive(false);
                 openHelpMenu();
+                AllMenu.SetActive(false);
             }
         }
     }
@@ -34,11 +41,13 @@ public class helpMenu : MonoBehaviour
     {
         //helpButton.SetActive(true);
         helpImage.SetActive(false);
+        pauseMenu.gameIsPaused = false;
     }
 
     public void openHelpMenu()
     {
         //helpButton.SetActive(false);
         helpImage.SetActive(true);
+        pauseMenu.gameIsPaused = true;
     }
 }

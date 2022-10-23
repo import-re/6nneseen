@@ -5,19 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
-    public GameObject healthCollectiblesPause;
-    public GameObject Help;
+    //public GameObject healthCollectiblesPause;
+    //public GameObject Help;
     void Update()
     {
-        Scene currentScene = SceneManager.GetActiveScene ();
-        string sceneName = currentScene.name;
-        DontDestroyOnLoad(Help);
-        if(sceneName == "Level1" | sceneName == "Level2" | sceneName == "Level3"){
-            DontDestroyOnLoad(healthCollectiblesPause);
+        //Debug.Log("Ma ei saa aru");
+        /*if(Help.activeSelf)
+        {
+            Debug.Log("is active");
+            gameObject.SetActive(false);
         }
         else
         {
-            Destroy(healthCollectiblesPause);
+            Debug.Log("no");
+            gameObject.SetActive(true);
+        }*/
+
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+        if(sceneName == "Level1" | sceneName == "Level2")
+        {
+            DontDestroyOnLoad(gameObject);
         }
+        
+    }
+
+    void Start()
+    {
+        gameObject.SetActive(true);
     }
 }
+
+
