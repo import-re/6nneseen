@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     //private static int ehealth = 9;
     //private int currentEhealth = 0;
     //int currentEHealth;
-    int currentEhealth;
+    public int currentEhealth;
     string enemyType;
 
     void Awake()

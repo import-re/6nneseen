@@ -28,7 +28,7 @@ public class VeiderRohelineKoletis : MonoBehaviour
         {
             if (gameObject.tag == "RohelineKoletis")
             {
-                //ShootBurst();
+                ShootBurst();
             }
             else
             {

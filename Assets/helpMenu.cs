@@ -9,7 +9,7 @@ public class helpMenu : MonoBehaviour
     public GameObject helpImage;
     public GameObject AllMenu;
     public GameObject helpText;
-    public Level1 pauseMenu;
+    public bool helpMenuIsActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,7 @@ public class helpMenu : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("the help menu is opened: " + helpMenuIsActive);
         if(Input.GetKeyUp("h"))
         {
             if (helpImage.activeInHierarchy)
@@ -35,19 +36,36 @@ public class helpMenu : MonoBehaviour
                 AllMenu.SetActive(false);
             }
         }
+
+
+        if (helpText.activeInHierarchy)
+        {
+            helpMenuIsActive = true;
+            Time.timeScale = 0f;
+        }
+
+        if(helpMenuIsActive)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
     // Update is called once per frame
     public void closeHelpMenu()
     {
         //helpButton.SetActive(true);
         helpImage.SetActive(false);
-        pauseMenu.gameIsPaused = false;
+        helpMenuIsActive = false;
     }
 
     public void openHelpMenu()
     {
         //helpButton.SetActive(false);
         helpImage.SetActive(true);
-        pauseMenu.gameIsPaused = true;
+        helpMenuIsActive = true;
+  
     }
 }

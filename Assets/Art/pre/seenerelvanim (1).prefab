@@ -253,7 +253,7 @@ MonoBehaviour:
   Pyss: {fileID: 0}
   Pudel: {fileID: 0}
   pickUphasBeenCalled: 0
-  playerScript: {fileID: 0}
+  playerScript: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
   playerMovingScript: {fileID: 7080748288546696746, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
 --- !u!114 &1321563045808163125
 MonoBehaviour:
@@ -269,7 +269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1321563046003338333}
   bulletPrefab: {fileID: 5193241135040070849, guid: 9a52ab4616756fb4999dd9f1822e7d7d, type: 3}
-  isBeingHeld: 0
   bulletType: 0
   bulletPrefab1: {fileID: 5193241135040070849, guid: 9a52ab4616756fb4999dd9f1822e7d7d, type: 3}
   bulletPrefab2: {fileID: 8742891487043723237, guid: 2a4d299d2e0e4b94492f1ae4468a1846, type: 3}

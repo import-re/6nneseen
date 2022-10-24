@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
                     hasChecked = true;
                 }
             }
-        if (Input.GetKeyDown("g"))
+        if (Input.GetButtonDown("Fire2"))
         {
             if(currentGrenadeCount > 0)
             {
