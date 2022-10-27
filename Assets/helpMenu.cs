@@ -10,10 +10,10 @@ public class helpMenu : MonoBehaviour
     public GameObject AllMenu;
     public GameObject helpText;
     public bool helpMenuIsActive;
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        //helpButton.SetActive(true);
         helpImage.SetActive(false);
         helpText.SetActive(true);
     }
@@ -53,17 +53,15 @@ public class helpMenu : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-    // Update is called once per frame
+
     public void closeHelpMenu()
     {
-        //helpButton.SetActive(true);
         helpImage.SetActive(false);
         helpMenuIsActive = false;
     }
 
     public void openHelpMenu()
     {
-        //helpButton.SetActive(false);
         helpImage.SetActive(true);
         helpMenuIsActive = true;
   

@@ -13,7 +13,7 @@ public class DropHeath : MonoBehaviour
         HealSpawnPoint = GameObject.Find("HealSpawnPoint").transform;
         Scene currentScene = SceneManager.GetActiveScene ();
         string sceneName = currentScene.name;
-        if (sceneName == "Level3")
+        if (sceneName == "BossScene")
         {
             
             InvokeRepeating("Spawn", 10f, 10f);

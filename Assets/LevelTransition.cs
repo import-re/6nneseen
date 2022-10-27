@@ -17,10 +17,18 @@ public class LevelTransition : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
+            Scene currentScene = SceneManager.GetActiveScene ();
+            string sceneName = currentScene.name;
+            if (sceneName != "Level3")
+            {
             //DontDestroyOnLoad(Canvas);
-            DontDestroyOnLoad(coll.gameObject);
-            StartCoroutine(LoadNextScene());
-            //DontDestroyOnLoad(coll.gameObject);
+                DontDestroyOnLoad(coll.gameObject);
+                StartCoroutine(LoadNextScene());
+            }
+            else
+            {
+                StartCoroutine(LoadNextScene());
+            }
         }
 
     }

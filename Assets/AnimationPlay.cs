@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class AnimationPlay : MonoBehaviour
 {
-    //[SerializeField] private Animator anim;
-    // Start is called before the first frame update
-    public Animator anim;
+        public Animator anim;
     public bool grenadeThrown;
     public Player player;
     public bool grenadeOut;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         anim.SetBool("grenadeTrown", grenadeThrown);

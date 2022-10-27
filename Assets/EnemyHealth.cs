@@ -9,25 +9,18 @@ public class EnemyHealth : MonoBehaviour
     //int currentEHealth;
     public int currentEhealth;
     string enemyType;
+    private static int eHealth;
 
-    void Awake()
-    {
-        //gameObject.SetActive(true);
-        /*if (gameObject.tag == "EnemySeen")
-        {
-            ehealth = 9;
-        }*/
-    }
 
     void Update()
     {
         //Debug.Log($"{enemyType} is {currentEhealth}");
-        Debug.Log(currentEhealth);
+        Debug.Log("current enemy health is " + currentEhealth);
     }
 
     void Start()
     {
-        //currentEhealth = ehealth;
+        gameObject.SetActive(true);
         var EnemyHealthes = new Dictionary<string, int>()
         {
             {"EnemySeen", 9},
@@ -37,16 +30,11 @@ public class EnemyHealth : MonoBehaviour
             {"Boss", 35}
         };
         string enemyType = gameObject.tag;
-        int eHealth;
-        //int currentEhealth;
-        //Debug.Log(enemyType);
         if (EnemyHealthes.TryGetValue(enemyType, out eHealth))
         {
             currentEhealth = eHealth;
+            Debug.Log(enemyType + " 's health is " + eHealth);
         }
-
-        //string enemyType = gameObject.tag;
-        //private static int ehealth;
     }
 
 
@@ -81,7 +69,7 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     
     {
-        Debug.Log("Die");
+        //Debug.Log("Die");
         gameObject.SetActive(false);
         //Destroy(gameObject);
     }

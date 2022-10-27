@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         string sceneName = currentScene.name;
         if(!hasChecked)
             {
-                if(sceneName == "Level3")
+                if(sceneName == "BossScene")
                 {
                     currentGrenadeCount = currentGrenadeCount + coinCounter;
                     textG.text = currentGrenadeCount.ToString();

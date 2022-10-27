@@ -70,12 +70,13 @@ public class MeeleWeapon : MonoBehaviour
         {
             foreach (Collider2D enemy in enemiesToDamage)
             {
-                GameObject enemy1 = enemy.gameObject;
+                enemyHealthScript.TakeDamage(1);
+                /*GameObject enemy1 = enemy.gameObject;
 
                 if(enemy1.activeInHierarchy)
                 {
                     enemyHealthScript.TakeDamage(1);
-                }
+                }*/
             }
         }
         

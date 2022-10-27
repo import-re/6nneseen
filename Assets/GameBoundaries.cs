@@ -23,7 +23,8 @@ public class GameBoundaries : MonoBehaviour
         {
             { "Level1", new Boundaries(114, 0)},
             { "Level2", new Boundaries(277, 97)},
-            { "Level3", new Boundaries(351, 267)}
+            { "Level3", new Boundaries(351, 267)},
+            {"BossScene", new Boundaries(395, 338)}
         };
 
         Scene currentScene = SceneManager.GetActiveScene ();

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7080748288546696746}
   - component: {fileID: 1454730160000005798}
   - component: {fileID: 1454730160000005799}
+  - component: {fileID: 2796145242316418486}
   m_Layer: 9
   m_Name: PlayerAnimat
   m_TagString: Player
@@ -207,6 +208,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 7080748290278876742}
   m_CeilingCheck: {fileID: 7080748288967665964}
   m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -261,6 +263,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2796145242316418486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080748288546696765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db581d3632be27940950e6d8ec399ca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7080748288784509702
 GameObject:
   m_ObjectHideFlags: 0

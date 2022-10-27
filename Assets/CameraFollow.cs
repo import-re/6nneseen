@@ -15,8 +15,10 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        //target = GameObject.Find("Player").transform;
+        target = GameObject.Find("Player").transform;
         ///_fixedHeight = transform.position.y;
+        //Vector3 playersPos = new Vector3(307, 1, 0);
+        //transform.position = playersPos;
     }
 
 
@@ -28,7 +30,8 @@ public class CameraFollow : MonoBehaviour
         {
             { "Level1", 0.67f },
             { "Level2", 0.67f },
-            { "Level3", 0.67f }
+            { "Level3", 0.67f },
+            {"BossScene", 0.1f}
         };
 
         Scene currentScene = SceneManager.GetActiveScene ();

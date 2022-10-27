@@ -15,7 +15,7 @@ public class attackBehaviour : StateMachineBehaviour
         timer = Random.Range(minTime, maxTime);
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (timer <= 0)
@@ -33,7 +33,7 @@ public class attackBehaviour : StateMachineBehaviour
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         

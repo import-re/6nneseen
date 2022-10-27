@@ -32,9 +32,5 @@ public class Bullet : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-		/*while(coll.gameObject in whatIsEnemies)
-		{
-			Destroy(gameObject);
-		}*/
 	}
 }
