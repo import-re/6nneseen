@@ -8,6 +8,9 @@ public class MainMenu : MonoBehaviour
     public AudioSource buttonSound;
     public AudioSource exitSound;
     public GameObject optionsMenu;
+    public AudioSource startMusic;
+    public AudioSource opitonMusic;
+    public GameObject startMenu;
     //public GameObject OptionsScreen;
 
 
@@ -16,6 +19,7 @@ public class MainMenu : MonoBehaviour
         buttonSound = GetComponent<AudioSource>();
         exitSound = GetComponent<AudioSource>();
         optionsMenu.SetActive(false);
+        loadMainPage();
 
     }
 
@@ -36,18 +40,24 @@ public class MainMenu : MonoBehaviour
 
     public void loadMainPage()
     {
-        SceneManager.LoadScene("StartPage");
+        opitonMusic.Stop();
+        startMenu.SetActive(true);
+        startMusic.Play();
     }
 
     public void loadOptions()
     {
+        startMusic.Stop();
         buttonSound.Play();
         optionsMenu.SetActive(true);
+        opitonMusic.Play();
     }
 
     public void closeOptions()
     {
+        opitonMusic.Stop();
         buttonSound.Play();
         optionsMenu.SetActive(false);
+        startMusic.Play();
     }
 }
