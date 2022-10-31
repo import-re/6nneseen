@@ -581,9 +581,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2139607275}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: loadMainPage
+      - m_Target: {fileID: 2139607278}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: LoadStartMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1134,9 +1134,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2139607275}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: playGame
+      - m_Target: {fileID: 2139607278}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: StartOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1441,8 +1441,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2139607275}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 2139607278}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
@@ -1500,9 +1500,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2139607274}
-  - component: {fileID: 2139607275}
   - component: {fileID: 2139607276}
   - component: {fileID: 2139607277}
+  - component: {fileID: 2139607278}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1533,24 +1533,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2139607275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139607273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191dfd0e5ad0c39439b179585638f677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonSound: {fileID: 2139607276}
-  exitSound: {fileID: 2139607277}
-  optionsMenu: {fileID: 0}
-  startMusic: {fileID: 0}
-  opitonMusic: {fileID: 0}
-  startMenu: {fileID: 0}
 --- !u!82 &2139607276
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1743,3 +1725,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2139607278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139607273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbe7f340ad6c1345ad53101cb4bd9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSound: {fileID: 2139607276}

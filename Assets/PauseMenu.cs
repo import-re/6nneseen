@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level1 : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu;
     public bool gameIsPaused;
     public AudioSource pauseMusic;
-    public AudioSource level1Music;
+    public GameObject PauseM;
+    public GameObject PlayerStats;
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(pauseMenu.activeInHierarchy)
+            Debug.Log("eskre");
+            if(PauseM.activeInHierarchy)
             {
                 unPause();
             }
@@ -23,21 +24,23 @@ public class Level1 : MonoBehaviour
             }
         }
 
-        if(gameIsPaused)
+        /*if(gameIsPaused)
         {
+            PlayerStats.SetActive(true);
             Time.timeScale = 0f;
         }
         else
         {
+            PlayerStats.SetActive(false);
             Time.timeScale = 1;
-        }
+        }*/
     }
 
     
     public void Start()
     {
-        level1Music.Play();
-        pauseMenu.SetActive(false);
+        PlayerStats.SetActive(true);
+        PauseM.SetActive(false);
     }
 
 
@@ -55,16 +58,16 @@ public class Level1 : MonoBehaviour
     public void Pause()
     {
         //level1Music.Stop();
-        pauseMenu.SetActive(true);
+        PauseM.SetActive(true);
         gameIsPaused = true;
         pauseMusic.Play();
     }
 
     public void unPause()
     {
-        //pauseMusic.Stop();
-        pauseMenu.SetActive(false);
+        pauseMusic.Stop();
+        PauseM.SetActive(false);
         gameIsPaused = false;
-        level1Music.Play();
+        //level1Music.Play();
     }
 }
