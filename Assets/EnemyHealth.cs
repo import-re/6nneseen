@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     //int currentEHealth;
     public int currentEhealth;
     string enemyType;
-    private static int eHealth;
+    private int eHealth;
 
 
     void Update()
