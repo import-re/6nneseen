@@ -161,6 +161,7 @@ MonoBehaviour:
   pauseMusic: {fileID: 764946878377836616}
   PlayerStats: {fileID: 0}
   Paused: {fileID: 922274027277255767}
+  Level1Musc: {fileID: 0}
 --- !u!82 &764946878377836616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1556,3 +1557,4 @@ MonoBehaviour:
   pauseMusic: {fileID: 7716680653563449975}
   PauseM: {fileID: 922274027277255767}
   PlayerStats: {fileID: 0}
+  helpMenu: {fileID: 764946878377836617}

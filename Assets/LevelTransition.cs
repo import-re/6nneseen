@@ -19,7 +19,8 @@ public class LevelTransition : MonoBehaviour
         {
             Scene currentScene = SceneManager.GetActiveScene ();
             string sceneName = currentScene.name;
-            if (sceneName != "Level3")
+            
+            if (sceneName != "BossScene")
             {
             //DontDestroyOnLoad(Canvas);
                 DontDestroyOnLoad(coll.gameObject);

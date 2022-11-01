@@ -13,6 +13,7 @@ public class helpMenu : MonoBehaviour
     public AudioSource pauseMusic;
     public GameObject PlayerStats;
     public GameObject Paused;
+    public AudioSource Level1Musc;
 
 
     void Start()
@@ -60,7 +61,8 @@ public class helpMenu : MonoBehaviour
     {
         helpImage.SetActive(false);
         helpMenuIsActive = false;
-        pauseMusic.Stop();
+        pauseMusic.Pause();
+        Level1Musc.Play();
     }
 
     public void openHelpMenu()
@@ -68,6 +70,7 @@ public class helpMenu : MonoBehaviour
         helpImage.SetActive(true);
         helpMenuIsActive = true;
         pauseMusic.Play();
+        Level1Musc.Pause();
         //pauseMusic.Play();
         //level1.level1Music.Stop();
     }

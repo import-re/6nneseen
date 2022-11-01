@@ -15,10 +15,11 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         //Debug.Log($"{enemyType} is {currentEhealth}");
-        Debug.Log("current enemy health is " + currentEhealth);
+        //Debug.Log("current enemy health is " + currentEhealth);
     }
 
-    void Start()
+
+    void Awake()
     {
         gameObject.SetActive(true);
         var EnemyHealthes = new Dictionary<string, int>()
@@ -35,6 +36,11 @@ public class EnemyHealth : MonoBehaviour
             currentEhealth = eHealth;
             Debug.Log(enemyType + " 's health is " + eHealth);
         }
+    }
+
+    void Start()
+    {
+        gameObject.SetActive(true);
     }
 
 

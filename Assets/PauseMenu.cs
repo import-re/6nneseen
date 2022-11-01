@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public AudioSource pauseMusic;
     public GameObject PauseM;
     public GameObject PlayerStats;
+    //public AudioSource Level1Musc;
+    public helpMenu helpMenu;
 
     void Update()
     {
@@ -17,9 +19,11 @@ public class PauseMenu : MonoBehaviour
             if(PauseM.activeInHierarchy)
             {
                 unPause();
+                //Level1Musc.Play();
             }
             else
             {
+                //Level1Musc.Pause();
                 Pause();
             }
         }
@@ -41,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerStats.SetActive(true);
         PauseM.SetActive(false);
+        //Level1Musc.Play();
     }
 
 
@@ -58,14 +63,17 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         //level1Music.Stop();
+        helpMenu.Level1Musc.Pause();
         PauseM.SetActive(true);
         gameIsPaused = true;
         pauseMusic.Play();
+        
     }
 
     public void unPause()
     {
-        pauseMusic.Stop();
+        pauseMusic.Pause();
+        helpMenu.Level1Musc.Play();
         PauseM.SetActive(false);
         gameIsPaused = false;
         //level1Music.Play();

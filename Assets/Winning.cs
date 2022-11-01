@@ -20,6 +20,6 @@ public class Winning : MonoBehaviour
 
     void Start()
     {
-        Instantiate(player, playerSpawn.position, playerSpawn.rotation);
+        //Instantiate(player, playerSpawn.position, playerSpawn.rotation);
     }
 }
