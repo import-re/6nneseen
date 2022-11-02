@@ -11,6 +11,7 @@ public class smallEnemy : MonoBehaviour
     public Animator anim;
     public bool isDestroyed;
     public bool wasInvoked = false;
+    public AudioSource Growing;
 
 
     void Start()
@@ -27,6 +28,7 @@ public class smallEnemy : MonoBehaviour
 
         if (Mathf.Abs(distance) < 10)
         {
+            Growing.Play();
             if (wasInvoked == false)
             {
                 wasInvoked = true;

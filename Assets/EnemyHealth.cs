@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    //private static int ehealth = 9;
-    //private int currentEhealth = 0;
-    //int currentEHealth;
-    public int currentEhealth;
+    public int currentEhealth = 100000;
     string enemyType;
     private int eHealth;
 
 
     void Update()
     {
-        //Debug.Log($"{enemyType} is {currentEhealth}");
-        //Debug.Log("current enemy health is " + currentEhealth);
+
     }
 
 
@@ -35,6 +31,10 @@ public class EnemyHealth : MonoBehaviour
         {
             currentEhealth = eHealth;
             Debug.Log(enemyType + " 's health is " + eHealth);
+        }
+        else
+        {
+            Debug.Log("This enemy type doesn't exist" + enemyType);
         }
     }
 
@@ -75,9 +75,8 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     
     {
-        //Debug.Log("Die");
-        gameObject.SetActive(false);
-        //Destroy(gameObject);
+        Debug.Log("Die");
+        Destroy(gameObject);
     }
 
 }

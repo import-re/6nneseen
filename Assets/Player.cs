@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public int maxHealth = 10;
-    //public int damage;
     public int currentHealth;
     public HealthBar healthbar;
     public Text text;
@@ -28,7 +27,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log("neeeww");
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
         currentGrenadeCount = grenadeCount;
@@ -63,20 +61,19 @@ public class Player : MonoBehaviour
 
         foreach (Transform iChild in transform)
         {
-         string tag = iChild.gameObject.tag;
-         if (tag == "Weapon" | tag == "Meele")
-         {
-            //iChild = GameObject Weapon;
+            string tag = iChild.gameObject.tag;
+            if (tag == "Weapon" | tag == "Meele")
+            {
             weaponIsAttached = true;
             if (Input.GetKeyDown("q"))
             {
                 Destroy(iChild.gameObject);
             }
-         }
-         else
-         {
-            weaponIsAttached = false;
-         }
+            }
+            else
+            {
+                weaponIsAttached = false;
+            }
         }
     }
 
@@ -91,15 +88,6 @@ public class Player : MonoBehaviour
         if (coll.gameObject.tag == "EnemySeen" | coll.gameObject.tag == "OranzKoletis")
         {
             TakeDamage(2);
-            /*if(cooldown <= 0)
-            {
-                TakeDamage(2);
-                cooldown = StartBeforeEnemyAttack;
-            }
-            else
-            {
-                cooldown -= Time.deltaTime;    
-            }*/
         }
 
         if (coll.gameObject.tag == "Collectible")
@@ -107,7 +95,7 @@ public class Player : MonoBehaviour
             AddCoins();
             AddCoinCounter();
         }
-        if (coll.gameObject.tag == "Spikes" | coll.gameObject.tag == "VaikeKuul")
+        if (coll.gameObject.tag == "Spikes")
         {
             TakeDamage(1);
         }
@@ -126,8 +114,12 @@ public class Player : MonoBehaviour
         }
         if (coll.gameObject.tag == "RohelineKuul")
         {
-            //Debug.Log(coll.gameObject.tag);
             TakeDamage(2);
+            Destroy(coll.gameObject);
+        }
+        if (coll.gameObject.tag == "Vaikekuul")
+        {
+            TakeDamage(1);
             Destroy(coll.gameObject);
         }
     }
@@ -135,7 +127,6 @@ public class Player : MonoBehaviour
 
     public void TakeDamage (int damage)
     {
-        //Debug.Log("gucci gang");
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
 
