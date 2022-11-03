@@ -13,6 +13,11 @@ public class DontDestroy : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+
+        if (sceneName == "GameOver")
+        {
+            Destroy(gameObject);
+        }
         
     }
 

@@ -9,7 +9,8 @@ public class WinScreen : MonoBehaviour
     public GameObject credits;
     private bool triggered;
     public Animator anim;
-    // Start is called before the first frame update
+    float timeLeft = 10;
+
     void Start()
     {
         credits.SetActive(false);
@@ -17,11 +18,11 @@ public class WinScreen : MonoBehaviour
         Invoke("LoadPressAnyKey", loadNewScreen);
     }
 
-    // Update is called once per frame
     void Update()
     {
         anim.SetBool("triggered", triggered);
-        if (Input.anyKey)
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 & Input.anyKey)
         {
             LoadCredits();
         }

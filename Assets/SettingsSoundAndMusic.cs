@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Settings : MonoBehaviour
 {
-    private static readonly string FirstPlay = "FirstPlay";
+    /*private static readonly string FirstPlay = "FirstPlay";
     private static readonly string MusicPref = "MusicPref";
     private static readonly string SoundsPref = "SoundsPref";
     private int firstPlayInt;
@@ -11,12 +12,12 @@ public class Settings : MonoBehaviour
     public Slider Sounds;
     private float MusicFloat, SoundsFloat;
     public AudioSource MusicAudio;
-    public AudioSource[] SoundsAudio;
-
+    public AudioSource[] SoundsAudio;*/
+    public AudioMixer audioMixer;
 
     void Start()
     {
-        MusicAudio = GetComponent<AudioSource>();
+        /* MusicAudio = GetComponent<AudioSource>();
         firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
         if (firstPlayInt == 0)
         {
@@ -34,11 +35,11 @@ public class Settings : MonoBehaviour
             MusicSlider.value = MusicFloat;
             SoundsFloat = PlayerPrefs.GetFloat(SoundsPref);
             Sounds.value = SoundsFloat;
-        }
+        }*/
     }
 
 
-    public void SaveSoundSettings()
+    /*public void SaveSoundSettings()
     {
         PlayerPrefs.SetFloat(MusicPref, MusicSlider.value);
         PlayerPrefs.SetFloat(SoundsPref, Sounds.value);
@@ -59,5 +60,10 @@ public class Settings : MonoBehaviour
         {
             //SoundsAudio[i] = Sounds.value;
         }
+    }*/
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
     }
 }

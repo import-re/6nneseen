@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1454730160000005798}
   - component: {fileID: 1454730160000005799}
   - component: {fileID: 2796145242316418486}
+  - component: {fileID: 4674524660240757906}
   m_Layer: 9
   m_Name: PlayerAnimat
   m_TagString: Player
@@ -275,6 +276,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db581d3632be27940950e6d8ec399ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4674524660240757906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080748288546696765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189e2cdb98845d740ad3c905c7fec20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBooster: {fileID: 6187791640236216162, guid: 626acf60bc9c8ba4fbd87e3ef2ca0094, type: 3}
+  HealSpawnPoint: {fileID: 0}
 --- !u!1 &7080748288784509702
 GameObject:
   m_ObjectHideFlags: 0

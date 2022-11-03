@@ -17,12 +17,12 @@ public class Player : MonoBehaviour
     public int grenadeCount = 5;
     public int currentGrenadeCount;
     public bool hasChecked;
-    public Pickup weapon;
+    //public Pickup weapon;
     public bool weaponIsAttached;
-    public GameObject Weapon;
-    public float cooldown;
-    public float StartBeforeEnemyAttack;
-    public Animator bombAnim;
+    //public GameObject Weapon;
+    //public float cooldown;
+    //public float StartBeforeEnemyAttack;
+    //public Animator bombAnim;
 
 
     void Start()
@@ -132,6 +132,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            Destroy(gameObject, 1);
             Die();
         }
     }

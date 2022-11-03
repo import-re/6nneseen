@@ -8,7 +8,6 @@ public class VeiderRohelineKoletis : MonoBehaviour
     public Transform player; 
     public GameObject bulletPrefab;
     public float distance;
-     GameObject[] bulletsATM;
     [SerializeField] private float cooldown = 5;
     private float cooldownTimer;
     void Start()
@@ -21,9 +20,6 @@ public class VeiderRohelineKoletis : MonoBehaviour
     void Update()
     {
         distance = player.position.x - transform.position.x;
-        //bulletsATM = GameObject.FindGameObjectsWithTag("RohelineKuul");
-        //Debug.Log(distance);
-
         if (Mathf.Abs(distance) < 10)
         {
             if (gameObject.tag == "RohelineKoletis")

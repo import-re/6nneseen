@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class Winning : MonoBehaviour
 {
     GameObject[] gameObjects;
-    public GameObject player;
-    public Transform playerSpawn;
     void Update()
     {
         gameObjects = GameObject.FindGameObjectsWithTag("Boss");
@@ -15,11 +13,5 @@ public class Winning : MonoBehaviour
         {
             SceneManager.LoadScene("Win");
         }
-    }
-
-
-    void Start()
-    {
-        //Instantiate(player, playerSpawn.position, playerSpawn.rotation);
     }
 }

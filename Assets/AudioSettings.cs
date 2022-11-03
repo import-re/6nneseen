@@ -1,28 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioSettings : MonoBehaviour
 {
-    private static readonly string MusicPref = "MusicPref";
-    private static readonly string SoundsPref = "SoundsPref";
-    private float MusicFloat, SoundsFloat;
-    public AudioSource[] MusicAudio;
-    public AudioSource[] SoundsAudio;
-    // Start is called before the first frame update
-    void Awake()
+    [SerializeField] Slider volumeSlider;
+    /*public AudioMixer audioMixer;
+
+
+    public void SetVolume(float volume)
+        {
+            audioMixer.SetFloat("volume", volume);
+        }*/
+
+    void Start()
     {
-        ContinueSettings();
+        if (!PlayerPrefs.HasKey("musicVolume"))
+        {
+            PlayerPrefs.SetFloat("musicVolume", 1);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
     }
 
-    private void ContinueSettings()
+    public void ChangeVolume()
     {
-        MusicFloat = PlayerPrefs.GetFloat(MusicPref);
-        SoundsFloat = PlayerPrefs.GetFloat(SoundsPref);
-        /*MusicAudio.volume = MusicFloat;
-        for (int i = 0; i < SoundsAudio.Length; i++)
-        {
-            SoundsAudio[i] = SoundsFloat;
-        }*/
+        AudioListener.volume = volumeSlider.value;
+        Save();
     }
+
+    void Load()
+    {
+        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+    }
+
+    void Save()
+    {
+        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+    }
+
+
 }

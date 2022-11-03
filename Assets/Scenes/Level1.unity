@@ -1116,6 +1116,10 @@ PrefabInstance:
       propertyPath: m_Animations.Array.data[2]
       value: 
       objectReference: {fileID: 7400000, guid: 7e2df5a1ef22b104f9d5d05b5eac21d9, type: 2}
+    - target: {fileID: 4674524660240757906, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
+      propertyPath: HealSpawnPoint
+      value: 
+      objectReference: {fileID: 2077608758}
     - target: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
       propertyPath: anim
       value: 
@@ -1448,8 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f771eff3b56039c4e8ca402b12c44938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicAudio: []
-  SoundsAudio: []
+  audioMixer: {fileID: 0}
 --- !u!4 &384301723
 Transform:
   m_ObjectHideFlags: 0
@@ -3735,7 +3738,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
