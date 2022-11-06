@@ -8,8 +8,8 @@ public class PauseMenu : MonoBehaviour
     public AudioSource pauseMusic;
     public GameObject PauseM;
     public GameObject PlayerStats;
-    //public AudioSource Level1Musc;
     public helpMenu helpMenu;
+    public GameObject Settings;
 
     void Update()
     {
@@ -19,25 +19,12 @@ public class PauseMenu : MonoBehaviour
             if(PauseM.activeInHierarchy)
             {
                 unPause();
-                //Level1Musc.Play();
             }
             else
             {
-                //Level1Musc.Pause();
                 Pause();
             }
         }
-
-        /*if(gameIsPaused)
-        {
-            PlayerStats.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            PlayerStats.SetActive(false);
-            Time.timeScale = 1;
-        }*/
     }
 
     
@@ -45,7 +32,7 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerStats.SetActive(true);
         PauseM.SetActive(false);
-        //Level1Musc.Play();
+        Settings.SetActive(false);
     }
 
 
@@ -55,14 +42,20 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    public void Setting()
+    public void OpenSetting()
     {
-        Debug.Log("eskere");
+        Settings.SetActive(true);
     }
+
+
+    public void CloseSetting()
+    {
+        Settings.SetActive(false);
+    }
+
 
     public void Pause()
     {
-        //level1Music.Stop();
         helpMenu.Level1Musc.Pause();
         PauseM.SetActive(true);
         gameIsPaused = true;
@@ -76,6 +69,5 @@ public class PauseMenu : MonoBehaviour
         helpMenu.Level1Musc.Play();
         PauseM.SetActive(false);
         gameIsPaused = false;
-        //level1Music.Play();
     }
 }
