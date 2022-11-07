@@ -7,7 +7,7 @@ public class LevelTransition : MonoBehaviour
 {
     public string sceneToLoad;
     //public GameObject Canvas;
-    public Animator crossfade;
+    //public Animator crossfade;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class LevelTransition : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
-        crossfade.SetTrigger("Start");
+        //crossfade.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneToLoad);
 
