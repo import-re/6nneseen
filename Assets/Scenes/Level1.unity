@@ -857,6 +857,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1321563045808163125, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
+      propertyPath: help
+      value: 
+      objectReference: {fileID: 198617966}
+    - target: {fileID: 1321563045808163125, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 7028583041229437265}
+    - target: {fileID: 1321563045808163125, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: playerMovingScript
       value: 
       objectReference: {fileID: 2076953168}
@@ -1125,9 +1133,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2076953157}
     - target: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
+      propertyPath: help
+      value: 
+      objectReference: {fileID: 198617966}
+    - target: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 2014822113}
+    - target: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 7028583041229437265}
     - target: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
       propertyPath: textG
       value: 

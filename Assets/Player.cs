@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public bool hasChecked;
     //public Pickup weapon;
     public bool weaponIsAttached;
+    public PauseMenu pause;
+    public helpMenu help;
     //public GameObject Weapon;
     //public float cooldown;
     //public float StartBeforeEnemyAttack;
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour
                     hasChecked = true;
                 }
             }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") & !pause.gameIsPaused & !help.helpMenuIsActive)
         {
             if(currentGrenadeCount > 0)
             {

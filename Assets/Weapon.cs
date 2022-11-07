@@ -15,6 +15,8 @@ public class Weapon : MonoBehaviour
     public bool isShooting = false;
     public Animator anim;
     public CharacterController2D playerMovingScript;
+    public PauseMenu pause;
+    public helpMenu help;
 
 
     void Start()
@@ -29,7 +31,7 @@ public class Weapon : MonoBehaviour
         anim.SetBool("isShooting", isShooting);
         if (transform.parent != null)
         {
-            if (Input.GetButtonDown("Fire1") && playerMovingScript.m_FacingRight)
+            if (Input.GetButtonDown("Fire1") && playerMovingScript.m_FacingRight & !pause.gameIsPaused & !help.helpMenuIsActive)
             {
                 ShootRandom();
             }
