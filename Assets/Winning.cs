@@ -14,4 +14,10 @@ public class Winning : MonoBehaviour
             SceneManager.LoadScene("Win");
         }
     }
+
+
+    void Start()
+    {
+        
+    }
 }
