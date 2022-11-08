@@ -10,6 +10,7 @@ public class WinScreen : MonoBehaviour
     private bool triggered;
     public Animator anim;
     float timeLeft = 10;
+    float exitTimeLeft = 25;
 
     void Start()
     {
@@ -25,6 +26,11 @@ public class WinScreen : MonoBehaviour
         if (timeLeft < 0 & Input.anyKey)
         {
             LoadCredits();
+        }
+
+        if (exitTimeLeft < 0 & Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
 
     }
