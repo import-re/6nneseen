@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class helpMenu : MonoBehaviour
 {
-    //public Button helpButton;
     public GameObject helpImage;
     public GameObject AllMenu;
     public GameObject helpText;
@@ -27,7 +23,6 @@ public class helpMenu : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("the help menu is opened: " + helpMenuIsActive);
         if(Input.GetKeyUp("h"))
         {
             if (helpImage.activeInHierarchy)
@@ -46,7 +41,6 @@ public class helpMenu : MonoBehaviour
 
         if (helpText.activeInHierarchy | Paused.activeInHierarchy | helpImage.activeInHierarchy)
         {
-            //helpMenuIsActive = true;
             PlayerStats.SetActive(false);
             Time.timeScale = 0f;
         }
@@ -71,7 +65,5 @@ public class helpMenu : MonoBehaviour
         helpMenuIsActive = true;
         pauseMusic.Play();
         Level1Musc.Pause();
-        //pauseMusic.Play();
-        //level1.level1Music.Stop();
     }
 }

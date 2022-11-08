@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +9,6 @@ public class MainMenu : MonoBehaviour
     public AudioSource startMusic;
     public AudioSource opitonMusic;
     public GameObject startMenu;
-    //public GameObject OptionsScreen;
 
 
     void Start()

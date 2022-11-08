@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VeiderRohelineKoletis : MonoBehaviour
@@ -12,7 +10,6 @@ public class VeiderRohelineKoletis : MonoBehaviour
     private float cooldownTimer;
     void Start()
     {
-        
         player = GameObject.Find("Player").transform;
     }
 
@@ -34,7 +31,6 @@ public class VeiderRohelineKoletis : MonoBehaviour
 
     }
     
-
     void ShootBurst()
     {
         cooldownTimer -= Time.deltaTime;
@@ -51,6 +47,4 @@ public class VeiderRohelineKoletis : MonoBehaviour
         cooldownTimer = cooldown;
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-
-
 }

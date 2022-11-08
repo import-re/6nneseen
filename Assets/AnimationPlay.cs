@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationPlay : MonoBehaviour
 {
-        public Animator anim;
+    public Animator anim;
     public bool grenadeThrown;
     public Player player;
     public bool grenadeOut;

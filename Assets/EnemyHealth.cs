@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +6,6 @@ public class EnemyHealth : MonoBehaviour
     public int currentEhealth = 100000;
     string enemyType;
     private int eHealth;
-
-
-    void Update()
-    {
-
-    }
 
 
     void Awake()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class idlebehaviour : StateMachineBehaviour
@@ -25,11 +23,5 @@ public class idlebehaviour : StateMachineBehaviour
         {
             timer -= Time.deltaTime;
         }
-    }
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        
     }
 }

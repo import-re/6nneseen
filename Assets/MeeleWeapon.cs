@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeeleWeapon : MonoBehaviour
@@ -13,21 +11,17 @@ public class MeeleWeapon : MonoBehaviour
     public EnemyHealth enemyHealthScript;
     public Animator anim;
     public bool isAttacking;
-    public GameObject enemy1;
 
 
     void Update()
     {
-        //Debug.Log(whatIsEnemies);
         anim.SetBool("isAttacking", isAttacking);
         CheckIfIsBeingHeld();
-        //Debug.Log(timeBtwAttack);
         if(timeBtwAttack <= 0)
         {
             if (Input.GetButtonDown("Fire1") && isBeingHeld)
             {
                 Attack();
-                //Debug.Log("attacking");
                 isAttacking = true;
             }
             timeBtwAttack = startTimeBtwAttack;
@@ -71,19 +65,7 @@ public class MeeleWeapon : MonoBehaviour
             foreach (Collider2D enemy in enemiesToDamage)
             {
                 enemyHealthScript.TakeDamage(1);
-                /*GameObject enemy1 = enemy.gameObject;
-
-                if(enemy1.activeInHierarchy)
-                {
-                    enemyHealthScript.TakeDamage(1);
-                }*/
             }
         }
-        
-        /*for(int i =0; i < enemiesToDamage.Length; i++)
-        {
-            enemy.TakeDamage(1);
-        }*/
-    
     }
 }

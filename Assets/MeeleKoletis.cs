@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeeleKoletis : MonoBehaviour
@@ -30,7 +28,6 @@ public class MeeleKoletis : MonoBehaviour
 
     void moveCharacter(Vector2 direction){
         whereToMove = (Vector2)transform.position + (direction * moveSpeed * Time.deltaTime);
-        //Debug.Log(whereToMove);
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -19,6 +17,4 @@ public class Spikes : MonoBehaviour
         distanceTillSpikes = Mathf.Abs(player.position.x - transform.position.x);
         anim.SetFloat("distanceTillSpikes", distanceTillSpikes);
     }
-
-
 }

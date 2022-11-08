@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class smallEnemy : MonoBehaviour
@@ -21,11 +19,8 @@ public class smallEnemy : MonoBehaviour
     
     void Update()
     {
-        //Debug.Log(distance);
         distance = player.position.x - transform.position.x;
         anim.SetFloat("distance", Mathf.Abs(distance));
-
-
         if (Mathf.Abs(distance) < 10)
         {
             Growing.Play();
@@ -37,7 +32,6 @@ public class smallEnemy : MonoBehaviour
         }
 
     }
-
 
 
     void transformEnemy()
