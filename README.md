@@ -10,3 +10,4 @@ In order to play the game you have to download following files:
  <head>
 <h1>The game is still in beta testing!</h1></head>
 If you find any bugs, you can contact us via sommeliermushroom@gmail.com
+All sprites are copyrighted and not free to use.
