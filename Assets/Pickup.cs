@@ -8,15 +8,20 @@ public class Pickup : MonoBehaviour
     private bool weaponHit = false;
     public bool pickUphasBeenCalled;
     public Player playerScript;
-    public CharacterController2D playerMovingScript;
+    public CharacterController2D PlayersScript;
 
+    void Start()
+    {
+        playerScript = player.GetComponent<Player>();
+        PlayersScript = player.GetComponent<CharacterController2D>();
+    }
 
     void Update()
     {
         player = GameObject.Find("Player");
         Pudel = GameObject.FindGameObjectWithTag("Meele");
         Pyss = GameObject.FindGameObjectWithTag("Weapon");
-        if (weaponHit && Input.GetKeyDown(KeyCode.E) && !playerScript.weaponIsAttached && playerMovingScript.m_FacingRight)
+        if (weaponHit && Input.GetKeyDown(KeyCode.E) && !playerScript.weaponIsAttached && PlayersScript.m_FacingRight)
         {
             PickUp();
         }

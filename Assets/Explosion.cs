@@ -4,7 +4,6 @@ public class Explosion : MonoBehaviour
 {
     public float radius = 100; 
     public AudioSource explosion; 
-    public EnemyHealth enemy;
 
     void Start()
     {
@@ -17,7 +16,13 @@ public class Explosion : MonoBehaviour
             {
                 Debug.Log(colliders);
                 rb.AddForce(transform.up * 25f, ForceMode2D.Impulse);
-                enemy.TakeDamage(2);
+                
+                EnemyHealth enemyHealth = rb.GetComponent<EnemyHealth>();
+                if (enemyHealth != null)
+
+                {
+                    enemyHealth.TakeDamage(2);
+                }
             }
 
         }

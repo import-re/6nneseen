@@ -875,11 +875,11 @@ PrefabInstance:
     - target: {fileID: 1321563045808163126, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 2076953160}
+      objectReference: {fileID: 0}
     - target: {fileID: 1321563045808163126, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: playerMovingScript
       value: 
-      objectReference: {fileID: 2076953168}
+      objectReference: {fileID: 0}
     - target: {fileID: 1329684332175631610, guid: d7d4cd605eaebe747a00eebcb0af7c98, type: 3}
       propertyPath: m_Name
       value: seenerelvanim (1)
@@ -3374,7 +3374,7 @@ MonoBehaviour:
   Pudel: {fileID: 0}
   pickUphasBeenCalled: 0
   playerScript: {fileID: 2076953160}
-  playerMovingScript: {fileID: 2076953168}
+  PlayersScript: {fileID: 0}
 --- !u!212 &1633047683
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3490,7 +3490,6 @@ MonoBehaviour:
   enemyHealthScript: {fileID: 1255921573990994808, guid: 8096294bfe928054b854eac6b65b5c2d, type: 3}
   anim: {fileID: 1633047687}
   isAttacking: 0
-  enemy1: {fileID: 0}
 --- !u!95 &1633047687
 Animator:
   serializedVersion: 4
@@ -3847,7 +3846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 2
-  yOffset: 1
   target: {fileID: 1634641368}
   PlayerPrefub: {fileID: 7080748288546696765, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
   playerSpawn: {fileID: 552662661}
@@ -4149,7 +4147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Level2
-  crossfade: {fileID: 0}
 --- !u!95 &2076953157 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1454730160000005799, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}

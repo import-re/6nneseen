@@ -10,14 +10,27 @@ public class helpMenu : MonoBehaviour
     public GameObject PlayerStats;
     public GameObject Paused;
     public AudioSource Level1Musc;
+    int timesPlayed;
 
 
     void Start()
     {
+        timesPlayed = PlayerPrefs.GetInt("TimesPlayed", 0);
+        timesPlayed++;
+        PlayerPrefs.SetInt("TimesPlayed", timesPlayed);
+        Debug.Log(timesPlayed);
         helpImage.SetActive(false);
-        helpText.SetActive(true);
-        pauseMusic.Play();
         PlayerStats.SetActive(true);
+        if (timesPlayed >= 2)
+        {
+            helpText.SetActive(false);
+            Level1Musc.Play();
+        }
+        else
+        {
+            helpText.SetActive(true);
+            pauseMusic.Play();
+        }
     }
 
 

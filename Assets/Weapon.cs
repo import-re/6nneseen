@@ -11,14 +11,17 @@ public class Weapon : MonoBehaviour
     public AudioSource shootingSound; 
     public bool isShooting = false;
     public Animator anim;
-    public CharacterController2D playerMovingScript;
+    public CharacterController2D PlayersScript;
     public PauseMenu pause;
     public helpMenu help;
+    private GameObject player;
 
 
     void Start()
     {
         shootingSound = GetComponent<AudioSource>();
+        player = GameObject.Find("Player");
+        PlayersScript = player.GetComponent<CharacterController2D>();
     }
 
 
@@ -28,7 +31,7 @@ public class Weapon : MonoBehaviour
         anim.SetBool("isShooting", isShooting);
         if (transform.parent != null)
         {
-            if (Input.GetButtonDown("Fire1") && playerMovingScript.m_FacingRight & !pause.gameIsPaused & !help.helpMenuIsActive)
+            if (Input.GetButtonDown("Fire1") && PlayersScript.m_FacingRight & !pause.gameIsPaused & !help.helpMenuIsActive)
             {
                 ShootRandom();
             }

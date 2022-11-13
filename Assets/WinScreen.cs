@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
@@ -8,19 +9,24 @@ public class WinScreen : MonoBehaviour
     private bool triggered;
     public Animator anim;
     float timeLeft = 10;
-    float exitTimeLeft = 25;
+    float exitTimeLeft = 29;
+    float maxTimeLeft = 30;
+    public GameObject CloseBut;
 
     void Start()
     {
         credits.SetActive(false);
         PressAnyKey.SetActive(false);
         Invoke("LoadPressAnyKey", loadNewScreen);
+        CloseBut.SetActive(false);
     }
 
     void Update()
     {
         anim.SetBool("triggered", triggered);
         timeLeft -= Time.deltaTime;
+        exitTimeLeft -= Time.deltaTime;
+        maxTimeLeft -= Time.deltaTime;
         if (timeLeft < 0 & Input.anyKey)
         {
             LoadCredits();
@@ -29,6 +35,15 @@ public class WinScreen : MonoBehaviour
         if (exitTimeLeft < 0 & Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        if (exitTimeLeft < 0)
+        {
+            CloseBut.SetActive(true);
+        }
+        if (maxTimeLeft < 0)
+        {
+            //SceneManager.LoadScene("StartPage");
         }
 
     }
@@ -42,5 +57,10 @@ public class WinScreen : MonoBehaviour
     {
         credits.SetActive(true);
         triggered = true;
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
     }
 }
