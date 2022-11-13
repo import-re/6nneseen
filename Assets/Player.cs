@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 10;
+    private int maxHealth = 10;
     public int currentHealth;
     public HealthBar healthbar;
     public Text text;
@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public Transform LaunchOffset;
     public int grenadeCount = 5;
     public int currentGrenadeCount;
-    public bool hasChecked;
+    private bool hasChecked;
     public bool weaponIsAttached;
     public PauseMenu pause;
     public helpMenu help;

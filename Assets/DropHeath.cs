@@ -13,7 +13,7 @@ public class DropHeath : MonoBehaviour
         string sceneName = currentScene.name;
         if (sceneName == "BossScene")
         {
-            
+
             InvokeRepeating("Spawn", 10f, 10f);
         }
     }
