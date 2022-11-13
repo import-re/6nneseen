@@ -16,7 +16,7 @@ If you find any bugs, you can contact us via sommeliermushroom@gmail.com
 </div>
  <div id="badges">
   <a href="https://github.com/evodka/6nneseen/">
-    <img src="https://img.shields.io/github/stars/evodka?style=social">
+    <img src="https://img.shields.io/github/stars/evakaz?style=social">
   </a>
   <a href="https://www.linkedin.com/in/eva-kazakovskaia/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
