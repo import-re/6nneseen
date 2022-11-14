@@ -1124,6 +1124,14 @@ PrefabInstance:
       propertyPath: m_Animations.Array.data[2]
       value: 
       objectReference: {fileID: 7400000, guid: 7e2df5a1ef22b104f9d5d05b5eac21d9, type: 2}
+    - target: {fileID: 2381571328539248175, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381571328539248175, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.99
+      objectReference: {fileID: 0}
     - target: {fileID: 7080748288546696757, guid: 6ffb9c0dc4cd1734a881b4afa3ed94a4, type: 3}
       propertyPath: anim
       value: 
