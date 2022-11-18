@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -66,5 +67,16 @@ public class PauseMenu : MonoBehaviour
         helpMenu.Level1Musc.Play();
         PauseM.SetActive(false);
         gameIsPaused = false;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("StartPage");
     }
 }

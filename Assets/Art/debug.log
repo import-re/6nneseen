@@ -8,3 +8,4 @@
 [0925/000909.136:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
 [0925/000926.841:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
 [1114/201147.729:INFO:CONSOLE(1)] "Long rAF frame-time", source: file:///C:/Program%20Files/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
+[1117/170005.670:INFO:CONSOLE(1)] "Long rAF frame-time", source: file:///C:/Program%20Files/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)

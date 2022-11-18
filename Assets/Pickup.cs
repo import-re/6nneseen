@@ -18,12 +18,16 @@ public class Pickup : MonoBehaviour
 
     void Update()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         Pudel = GameObject.FindGameObjectWithTag("Meele");
         Pyss = GameObject.FindGameObjectWithTag("Weapon");
         if (weaponHit && Input.GetKeyDown(KeyCode.E) && !playerScript.weaponIsAttached && PlayersScript.m_FacingRight)
         {
             PickUp();
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && playerScript.weaponIsAttached)
+        {
+            DropWeapon();
         }
     }
 
@@ -41,6 +45,8 @@ public class Pickup : MonoBehaviour
     void PickUp()
     {
         transform.SetParent(player.transform);
+        transform.localPosition = new Vector3(0.9f, 0.6f);
+        
         if(gameObject == Pudel)
         {
             transform.localPosition = new Vector3(0.9f, 0.6f);
@@ -50,22 +56,23 @@ public class Pickup : MonoBehaviour
             transform.localPosition = new Vector3(0.7f, 0.15f);
         }
         pickUphasBeenCalled = true;
+        playerScript.weaponIsAttached = true;
     }
-
 
     void DropWeapon()
     {
-        transform.parent = null;
         pickUphasBeenCalled = false;
-
+        transform.parent = null;
+        /*
         if(gameObject == Pudel)
         {
-            Pudel.SetActive(false);
+            transform.parent = null;
         }
 
         else
         {
-            Pyss.SetActive(false);
-        }
+            transform.parent = null;
+        }*/
+        playerScript.weaponIsAttached = false;
     }
 }

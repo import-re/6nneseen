@@ -54,22 +54,18 @@ public class Player : MonoBehaviour
         }
 
 
-        foreach (Transform iChild in transform)
+        /*foreach (Transform iChild in transform)
         {
             string tag = iChild.gameObject.tag;
             if (tag == "Weapon" | tag == "Meele")
             {
-            weaponIsAttached = true;
-            if (Input.GetKeyDown("q"))
-            {
-                Destroy(iChild.gameObject);
-            }
+                weaponIsAttached = true;
             }
             else
             {
                 weaponIsAttached = false;
             }
-        }
+        }*/
     }
 
 
