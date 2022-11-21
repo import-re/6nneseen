@@ -12,8 +12,8 @@ public class MainMenu : MonoBehaviour
     int timesPlayed;
     public GameObject cartoon;
     public AudioSource cartoonMusc;
-    private float TimeTillTransition = 15;
-    float timeTillStart = 50;
+    private float TimeTillTransition = 49;
+    float timeTillStart = 85;
     public GameObject TrippyAnimation;
     bool hasChecked;
     bool hasCheckedAnim;
@@ -29,17 +29,13 @@ public class MainMenu : MonoBehaviour
         exitSound = GetComponent<AudioSource>();
         optionsMenu.SetActive(false);
         TrippyAnimation.SetActive(false);
-        loadMainPage();
         if (timesPlayed >= 2)
         {
             loadMainPage();
         }
         else
         {
-            cartoon.SetActive(true);
-            cartoonMusc.Play();
-            startMusic.Pause();
-            opitonMusic.Pause();
+            LoadCartoon();
         }
 
     }
@@ -47,6 +43,7 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         TimeTillTransition -= Time.deltaTime;
+        Debug.Log(TimeTillTransition);
         timeTillStart -= Time.deltaTime;
         if (TimeTillTransition < 0 & !hasCheckedAnim)
         {
@@ -68,10 +65,6 @@ public class MainMenu : MonoBehaviour
         cartoonMusc.Play();
         startMusic.Pause();
         opitonMusic.Pause();
-        if (TimeTillTransition < 0)
-        {
-            TrippyAnimation.SetActive(true);
-        }
     }
 
 
