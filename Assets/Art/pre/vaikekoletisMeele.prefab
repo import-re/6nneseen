@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639aa0f1416e783469abc2bac545f046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ehealth: 6
+  currentEhealth: 100000
 --- !u!50 &1825756024498435323
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +157,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1400845, y: -0.05926633}
+  m_Offset: {x: -0.1400845, y: -0.07640123}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -168,8 +168,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5393252, y: 2.4159527}
-  m_EdgeRadius: 0
+  m_Size: {x: 3.5393252, y: 2.0938172}
+  m_EdgeRadius: 0.16
 --- !u!114 &1825756024498435325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639aa0f1416e783469abc2bac545f046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ehealth: 6
+  currentEhealth: 100000
 --- !u!114 &1825756024498435324
 MonoBehaviour:
   m_ObjectHideFlags: 0

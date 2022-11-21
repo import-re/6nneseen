@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8657568338962780207}
   - component: {fileID: 8657568338962780200}
   - component: {fileID: 8657568338962780203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spikes1
   m_TagString: Spikes
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5439551}
+  m_Offset: {x: -0.025080204, y: -0.5152859}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -146,5 +146,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.1, y: 2.5012584}
-  m_EdgeRadius: 0
+  m_Size: {x: 3.1180859, y: 1.4978379}
+  m_EdgeRadius: 0.19
