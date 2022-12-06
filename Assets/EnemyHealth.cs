@@ -57,7 +57,6 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage (int damage)
     {
         currentEhealth -= damage;
-        //Debug.Log(ehealth);
         if (currentEhealth <= 0)
         {
             Die();

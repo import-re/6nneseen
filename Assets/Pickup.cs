@@ -3,8 +3,8 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public GameObject player;
-    public GameObject Pyss;
-    public GameObject Pudel;
+    public GameObject rifle;
+    public GameObject melee;
     private bool weaponHit = false;
     public bool pickUphasBeenCalled;
     public Player playerScript;
@@ -19,8 +19,8 @@ public class Pickup : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Pudel = GameObject.FindGameObjectWithTag("Meele");
-        Pyss = GameObject.FindGameObjectWithTag("Weapon");
+        melee = GameObject.FindGameObjectWithTag("Meele");
+        rifle = GameObject.FindGameObjectWithTag("Weapon");
         if (weaponHit && Input.GetKeyDown(KeyCode.E) && !playerScript.weaponIsAttached && PlayersScript.m_FacingRight)
         {
             PickUp();
@@ -47,7 +47,7 @@ public class Pickup : MonoBehaviour
         transform.SetParent(player.transform);
         transform.localPosition = new Vector3(0.9f, 0.6f);
         
-        if(gameObject == Pudel)
+        if(gameObject == melee)
         {
             transform.localPosition = new Vector3(0.9f, 0.6f);
         }
@@ -63,16 +63,6 @@ public class Pickup : MonoBehaviour
     {
         pickUphasBeenCalled = false;
         transform.parent = null;
-        /*
-        if(gameObject == Pudel)
-        {
-            transform.parent = null;
-        }
-
-        else
-        {
-            transform.parent = null;
-        }*/
         playerScript.weaponIsAttached = false;
     }
 }

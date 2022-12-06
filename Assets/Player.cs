@@ -52,20 +52,6 @@ public class Player : MonoBehaviour
                 Debug.Log("You don't have any grenades left");
             }
         }
-
-
-        /*foreach (Transform iChild in transform)
-        {
-            string tag = iChild.gameObject.tag;
-            if (tag == "Weapon" | tag == "Meele")
-            {
-                weaponIsAttached = true;
-            }
-            else
-            {
-                weaponIsAttached = false;
-            }
-        }*/
     }
 
 
