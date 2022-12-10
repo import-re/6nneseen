@@ -41,11 +41,6 @@ public class WinScreen : MonoBehaviour
         {
             CloseBut.SetActive(true);
         }
-        if (maxTimeLeft < 0)
-        {
-            //SceneManager.LoadScene("StartPage");
-        }
-
     }
 
     void LoadPressAnyKey()

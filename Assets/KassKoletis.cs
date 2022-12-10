@@ -29,7 +29,6 @@ public class KassKoletis : MonoBehaviour
 
     void moveCharacter(Vector2 direction){
         whereToMove = (Vector2)transform.position + (direction * moveSpeed * Time.deltaTime);
-        //Debug.Log(whereToMove);
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }

@@ -42,6 +42,12 @@ public class Pickup : MonoBehaviour
     }
 
 
+    void OnCollisionExit2D(Collision2D other)
+    {
+        weaponHit = false;
+    }
+
+
     void PickUp()
     {
         transform.SetParent(player.transform);

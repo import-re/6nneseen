@@ -24,7 +24,7 @@ public class smallEnemy : MonoBehaviour
         if (Mathf.Abs(distance) < 10)
         {
             Growing.Play();
-            if (wasInvoked == false)
+            if (!wasInvoked)
             {
                 wasInvoked = true;
                 Invoke("transformEnemy", 2f);
